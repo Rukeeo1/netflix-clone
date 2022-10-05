@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-export const App: FC =  () =>  {
+const App: FC =  () =>  {
   return (
     <View style={styles.container}>
       <Text>Open up App.js to start working on your app!</Text>
@@ -17,3 +17,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+export default App;
