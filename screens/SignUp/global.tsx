@@ -55,7 +55,7 @@ const globalStyles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     width: 337.5,
-    // height: 589,
+    height: 589,
   },
 
   login_content_form: {
@@ -121,9 +121,6 @@ const globalStyles = StyleSheet.create({
   login_field_input: {
     alignItems: 'center',
     justifyContent: 'center',
-    // paddingTop: 16,
-    // paddingHorizontal: 20,
-    // backgroundColor: '#333333',
     width: 337.5,
     height: 50,
     fontSize: 16,
@@ -197,7 +194,6 @@ const globalStyles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     width: 337.5,
-    // height: 180,
   },
 
   login_signup_now: {
@@ -265,12 +261,8 @@ const globalStyles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingBottom: 20,
-    // width: 375,
-
     color: '#757575',
     fontSize: 16,
-
-    // marginTop: 80,
   },
 
   footer_divider: {},
