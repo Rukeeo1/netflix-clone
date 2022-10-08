@@ -1,18 +1,19 @@
-import React, {FC} from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { FC } from 'react';
+import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import { SignUp } from './screens/SignUp/SignUp';
 
-const App: FC =  () =>  {
+const App: FC = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
+    <SafeAreaView style={styles.container}>
+      <SignUp />
+    </SafeAreaView>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
     alignItems: 'center',
     justifyContent: 'center',
   },
