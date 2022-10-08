@@ -38,6 +38,7 @@ export const SignUp = (props: Props) => {
                           <View style={globalStyles.login_field_input}>
                             <TextInput
                               variant='filled'
+                              color='#333'
                               label='Email or phone number'
                               style={{
                                 width: 337.5,
@@ -62,6 +63,7 @@ export const SignUp = (props: Props) => {
                           <View style={globalStyles.login_field_input}>
                             <TextInput
                               variant='filled'
+                              color='#333'
                               label='Password'
                               style={{
                                 width: 337.5,

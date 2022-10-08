@@ -61,7 +61,7 @@ const globalStyles = StyleSheet.create({
   login_content_form: {
     alignItems: 'center',
     justifyContent: 'center',
-    width: '100%',
+    width: 337.5,
     paddingTop: 20,
     paddingBottom: 30,
   },
@@ -69,13 +69,13 @@ const globalStyles = StyleSheet.create({
   hybrid_login_form: {
     alignItems: 'center',
     justifyContent: 'center',
-    width: '100%',
+    width: 337.5,
   },
 
   hybrid_page_header: {
     alignItems: 'flex-start',
     justifyContent: 'center',
-    width: '100%',
+    width: 337.5,
     fontWeight: 700,
     marginBottom: 28,
   },
@@ -87,16 +87,16 @@ const globalStyles = StyleSheet.create({
   },
 
   login_form_action: {
-    alignItems: 'flex-start',
+    alignItems: 'center',
     justifyContent: 'center',
-    width: '100%',
+    width: 337.5,
   },
 
   login_field_container: {
     alignItems: 'center',
     justifyContent: 'center',
     paddingBottom: 16,
-    width: '100%',
+    width: 337.5,
     color: '#333',
     fontSize: 16,
   },
