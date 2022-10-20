@@ -12,6 +12,7 @@ export const SignUp = (props: Props) => {
   return (
     <ScrollView
       style={{ flex: 1 }}
+      showsVerticalScrollIndicator={false}
       contentContainerStyle={globalStyles.scrollview}
     >
       <View style={globalStyles.SignUpMountPoint}>
