@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  Image,
-  ImageBackground,
-  ScrollView,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import { Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import globalStyles from './global';
 import NetflixSvg from '../../assets/svgs/netflix-upload-emptystate.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
@@ -21,7 +14,6 @@ import profile_logo from '../../assets/images/profile_logo.png';
 import netflix_hero from '../../assets/images/netflix_hero_image.webp';
 import netflix_power from '../../assets/images/netflix_power.webp';
 import Rank_1 from '../../assets/svgs/rank_1-upload-emptystate.svg';
-import rank_1_image from '../../assets/images/rank_image.jpeg';
 import Rank_2 from '../../assets/svgs/rank_2-upload-emptystate.svg';
 import Rank_3 from '../../assets/svgs/rank_3-upload-emptystate.svg';
 import Rank_4 from '../../assets/svgs/rank_4-upload-emptystate.svg';
@@ -36,6 +28,9 @@ import Facebook from '../../assets/svgs/facebook-upload-emptystate.svg';
 import Instagram from '../../assets/svgs/instagram-upload-emptystate.svg';
 import Youtube from '../../assets/svgs/youtube-upload-emptystate.svg';
 import slides from '../../Components/NetflixImages';
+import { HomeCard_2 } from './HomeCard_2';
+import { HomeCard_1 } from './HomeCard_1';
+import CommonText from '../../shared/CommonText';
 
 interface Props {
   slides: {
@@ -582,7 +577,8 @@ export const Home = (props: Props) => {
                       </View>
                     </View>
 
-                    <View style={globalStyles.lolomoRow_title_card_1}>
+                    <HomeCard_1 />
+                    {/* <View style={globalStyles.lolomoRow_title_card_1}>
                       <View style={globalStyles.rowHeader_ltr}>
                         <View style={globalStyles.rowTitle_ltr0}>
                           <Text style={globalStyles.row_header_title}>
@@ -1108,9 +1104,11 @@ export const Home = (props: Props) => {
                           </View>
                         </View>
                       </View>
-                    </View>
+                    </View> */}
 
-                    <View style={globalStyles.lolomoRow_title_card_2}>
+                    <HomeCard_2 />
+
+                    {/* <View style={globalStyles.lolomoRow_title_card_2}>
                       <View style={globalStyles.rowHeader_ltr}>
                         <View style={globalStyles.rowTitle_ltr0}>
                           <Text style={globalStyles.row_header_title}>
@@ -1466,14 +1464,16 @@ export const Home = (props: Props) => {
                           </View>
                         </View>
                       </View>
-                    </View>
+                    </View> */}
+
 
                     <View style={globalStyles.lolomoRow_title_card_1}>
                       <View style={globalStyles.rowHeader_ltr}>
                         <View style={globalStyles.rowTitle_ltr0}>
-                          <Text style={globalStyles.row_header_title}>
-                            TV Mysteries
-                          </Text>
+
+                        <CommonText title='TV Mysteries' />
+                        
+                        
                         </View>
                       </View>
 
@@ -2809,21 +2809,27 @@ export const Home = (props: Props) => {
                 <View style={globalStyles.contentInfo_footer}>
                   <View style={globalStyles.social_links}>
                     <View style={globalStyles.social_links_icon}>
-                      <View style={globalStyles.social_icon_container}>
-                        <Facebook style={globalStyles.facebook} />
-                      </View>
+                      <TouchableOpacity>
+                        <View style={globalStyles.social_icon_container}>
+                          <Facebook style={globalStyles.facebook} />
+                        </View>
+                      </TouchableOpacity>
                     </View>
 
                     <View style={globalStyles.social_links_icon}>
-                      <View style={globalStyles.social_icon_container}>
-                        <Instagram style={globalStyles.facebook} />
-                      </View>
+                      <TouchableOpacity>
+                        <View style={globalStyles.social_icon_container}>
+                          <Instagram style={globalStyles.facebook} />
+                        </View>
+                      </TouchableOpacity>
                     </View>
 
                     <View style={globalStyles.social_links_icon}>
-                      <View style={globalStyles.social_icon_container}>
-                        <Youtube style={globalStyles.facebook} />
-                      </View>
+                      <TouchableOpacity>
+                        <View style={globalStyles.social_icon_container}>
+                          <Youtube style={globalStyles.facebook} />
+                        </View>
+                      </TouchableOpacity>
                     </View>
                   </View>
 
