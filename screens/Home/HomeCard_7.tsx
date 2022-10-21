@@ -4,14 +4,12 @@ import globalStyles from './global';
 import slides from '../../Components/NetflixImages';
 import CommonText from '../../shared/CommonText';
 
-interface Props {}
-
-export const HomeCard_1 = () => {
+export const HomeCard_7 = () => {
   return (
     <View style={globalStyles.lolomoRow_title_card_1}>
       <View style={globalStyles.rowHeader_ltr}>
         <View style={globalStyles.rowTitle_ltr0}>
-          <CommonText title='Continue Watching' />
+          <CommonText title='Acclaimed Writers' />
         </View>
       </View>
 
