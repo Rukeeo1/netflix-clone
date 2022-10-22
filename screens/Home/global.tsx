@@ -428,11 +428,24 @@ const globalStyles = StyleSheet.create({
   },
 
   slider: {
+    flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
     width: 375,
     height: 123.66,
     paddingHorizontal: '4%',
+  },
+
+  handlePrev: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 15,
+    height: 123.66,
+    backgroundColor: 'hsla(0,0%,8%,.5)',
+    borderBottomRightRadius: 4,
+    borderTopRightRadius: 4,
+    position: 'absolute',
+    left: 10,
   },
 
   sliderMask_showPeek: {
@@ -441,12 +454,31 @@ const globalStyles = StyleSheet.create({
     width: 345,
   },
 
+  handleNext: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 15,
+    height: 123.66,
+    backgroundColor: 'hsla(0,0%,8%,.5)',
+    borderBottomLeftRadius: 4,
+    borderTopLeftRadius: 4,
+    position: 'absolute',
+    right: 10,
+  },
+
   sliderContent: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
     width: 345,
     height: 122.66,
+  },
+
+  animated_container: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 345,
   },
 
   sliderItem: {

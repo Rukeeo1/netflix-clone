@@ -1,5 +1,14 @@
-import React from 'react';
-import { Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
+import React, { useRef, useState } from 'react';
+import {
+  Animated,
+  Dimensions,
+  FlatList,
+  Image,
+  ScrollView,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import globalStyles from './global';
 import Rank_1 from '../../assets/svgs/rank_1-upload-emptystate.svg';
 import Rank_2 from '../../assets/svgs/rank_2-upload-emptystate.svg';
@@ -13,10 +22,29 @@ import Rank_9 from '../../assets/svgs/rank_9-upload-emptystate.svg';
 import Rank_10 from '../../assets/svgs/rank_10-upload-emptystate.svg';
 import slides from '../../Components/NetflixImages';
 import CommonText from '../../shared/CommonText';
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
+import {
+  faChevronLeft,
+  faChevronRight,
+} from '@fortawesome/free-solid-svg-icons';
 
 interface Props {}
 
 export const HomeCard = (props: Props) => {
+  const [currentImage, setCurrentImage] = useState(0);
+  const animation = useRef(new Animated.Value(0));
+
+  const handlePrev = () => {
+    let newCurrentImage = currentImage - 1;
+    setCurrentImage(newCurrentImage);
+  };
+
+  const handleNext = () => {
+    let newCurrentImage = currentImage + 1;
+
+    setCurrentImage(newCurrentImage);
+  };
+
   return (
     <View style={globalStyles.lolomoRow_title_card}>
       <View style={globalStyles.rowHeader_ltr}>
@@ -29,7 +57,20 @@ export const HomeCard = (props: Props) => {
         <View style={globalStyles.ptrack_container}>
           <View style={globalStyles.rowContent_slider}>
             <View style={globalStyles.slider}>
-              <View style={globalStyles.sliderMask_showPeek}>
+              <TouchableOpacity
+                style={globalStyles.handlePrev}
+                onPress={handlePrev}
+              >
+                <View>
+                  <FontAwesomeIcon
+                    icon={faChevronLeft}
+                    size={16}
+                    style={globalStyles.faUserIcon}
+                  />
+                </View>
+              </TouchableOpacity>
+
+              <View style={[globalStyles.sliderMask_showPeek]}>
                 <View style={globalStyles.sliderContent}>
                   <ScrollView
                     pagingEnabled
@@ -268,6 +309,19 @@ export const HomeCard = (props: Props) => {
                   </ScrollView>
                 </View>
               </View>
+
+              <TouchableOpacity
+                style={globalStyles.handleNext}
+                onPress={handleNext}
+              >
+                <View>
+                  <FontAwesomeIcon
+                    icon={faChevronRight}
+                    size={16}
+                    style={globalStyles.faUserIcon}
+                  />
+                </View>
+              </TouchableOpacity>
             </View>
           </View>
         </View>

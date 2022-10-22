@@ -5,12 +5,15 @@ import { SignUp } from './screens/SignUp/SignUp';
 
 const App: FC = () => {
   return (
-      <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.container}>
       {/* <SignUp /> */}
-      <Home />
+      <Home
+        slides={{
+          id: 0,
+          image: '',
+        }}
+      />
     </SafeAreaView>
-
-    
   );
 };
 
@@ -19,7 +22,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#000',
   },
-
 });
 
 export default App;
