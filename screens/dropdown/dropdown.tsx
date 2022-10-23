@@ -16,10 +16,11 @@ export const DropdownMenu = (props: Props) => {
   return (
     <View style={globalStyles.account_dropdown_menu}>
       <View style={globalStyles.caret_icon}>
-      <FontAwesomeIcon  icon={faCaretUp}
-                                size={14}
-                                style={{color: 'white'}}
-                                 />
+        <FontAwesomeIcon
+          icon={faCaretUp}
+          size={14}
+          style={{ color: 'white' }}
+        />
       </View>
 
       <View style={globalStyles.ptrack_content}>
