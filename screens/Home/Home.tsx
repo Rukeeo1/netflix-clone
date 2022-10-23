@@ -90,18 +90,20 @@ export const Home = (props: Props) => {
                             <View
                               style={globalStyles.nav_account_dropdown_button}
                             >
-                              <View
-                                style={globalStyles.nav_account_profile_link}
-                              >
-                                <Image
-                                  source={profile_logo}
-                                  style={{
-                                    width: 32,
-                                    height: 32,
-                                    resizeMode: 'contain',
-                                  }}
-                                />
-                              </View>
+                              <TouchableOpacity>
+                                <View
+                                  style={globalStyles.nav_account_profile_link}
+                                >
+                                  <Image
+                                    source={profile_logo}
+                                    style={{
+                                      width: 32,
+                                      height: 32,
+                                      resizeMode: 'contain',
+                                    }}
+                                  />
+                                </View>
+                              </TouchableOpacity>
                             </View>
                           </View>
                         </View>
