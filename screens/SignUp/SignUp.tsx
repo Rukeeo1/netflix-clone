@@ -95,7 +95,7 @@ export const SignUp = (props: Props) => {
                     <View style={globalStyles.login_button_container}>
                       <TouchableOpacity>
                         <View style={globalStyles.button}>
-                          <NetflixBtn text='Sign In' />
+                          <NetflixBtn text='Sign In' textStyle={{}} />
                         </View>
                       </TouchableOpacity>
                     </View>
