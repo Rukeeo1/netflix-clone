@@ -8,9 +8,7 @@ interface Props {
 const CaretBtn = (props: Props) => {
   return (
     <TouchableOpacity>
-      <View style={styles.button}>
-   
-      </View>
+      <View style={styles.button}></View>
     </TouchableOpacity>
   );
 };

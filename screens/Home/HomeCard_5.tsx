@@ -9,7 +9,7 @@ export const HomeCard_5 = () => {
     <View style={globalStyles.lolomoRow_title_card_1}>
       <View style={globalStyles.rowHeader_ltr}>
         <View style={globalStyles.rowTitle_ltr0}>
-          <CommonText title='US TV Comedies' />
+          <CommonText title='US TV Comedies' titleStyle={{}} />
         </View>
       </View>
 

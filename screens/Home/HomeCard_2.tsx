@@ -21,7 +21,7 @@ export const HomeCard_2 = (props: Props) => {
     <View style={globalStyles.lolomoRow_title_card_2}>
       <View style={globalStyles.rowHeader_ltr}>
         <View style={globalStyles.rowTitle_ltr0}>
-          <CommonText title='Top 10 TV Movies in Nigeria Today' />
+          <CommonText title='Top 10 TV Movies in Nigeria Today' titleStyle={{}} />
         </View>
       </View>
 

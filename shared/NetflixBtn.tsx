@@ -3,15 +3,14 @@ import { StyleSheet, View, TouchableOpacity, Text } from 'react-native';
 
 interface Props {
   text: string;
+  textStyle: any;
 }
 
 const NetflixBtn = (props: Props) => {
   return (
-    <TouchableOpacity>
-      <View style={styles.button}>
-        <Text style={styles.buttonText}>{props.text}</Text>
-      </View>
-    </TouchableOpacity>
+    <View>
+      <Text style={[styles.buttonText, props.textStyle]}>{props.text}</Text>
+    </View>
   );
 };
 
