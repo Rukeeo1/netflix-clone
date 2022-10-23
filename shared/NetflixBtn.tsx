@@ -7,11 +7,9 @@ interface Props {
 
 const NetflixBtn = (props: Props) => {
   return (
-    <TouchableOpacity>
-      <View style={styles.button}>
-        <Text style={styles.buttonText}>{props.text}</Text>
-      </View>
-    </TouchableOpacity>
+    <View>
+      <Text style={styles.buttonText}>{props.text}</Text>
+    </View>
   );
 };
 
