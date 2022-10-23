@@ -147,6 +147,15 @@ const globalStyles = StyleSheet.create({
     marginBottom: 12,
   },
 
+  button: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 337.5,
+    height: 50,
+    borderRadius: 4,
+    backgroundColor: '#e50914',
+  },
+
   login_form_help: {
     flexDirection: 'row',
     alignItems: 'center',

@@ -1,5 +1,11 @@
 import React from 'react';
-import { ScrollView, Text, View } from 'react-native';
+import {
+  ScrollView,
+  Text,
+  Touchable,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import globalStyles from './global';
 import NetflixSvg from '../../assets/svgs/netflix-upload-emptystate.svg';
 import { TextInput } from '@react-native-material/core';
@@ -38,6 +44,7 @@ export const SignUp = (props: Props) => {
                           <View style={globalStyles.login_field_input}>
                             <TextInput
                               variant='filled'
+                              color='#333'
                               label='Email or phone number'
                               style={{
                                 width: 337.5,
@@ -62,6 +69,7 @@ export const SignUp = (props: Props) => {
                           <View style={globalStyles.login_field_input}>
                             <TextInput
                               variant='filled'
+                              color='#333'
                               label='Password'
                               style={{
                                 width: 337.5,
@@ -84,7 +92,11 @@ export const SignUp = (props: Props) => {
                     </View>
 
                     <View style={globalStyles.login_button_container}>
-                      <NetflixBtn text='Sign In' />
+                      <TouchableOpacity>
+                        <View style={globalStyles.button}>
+                          <NetflixBtn text='Sign In' textStyle={{}} />
+                        </View>
+                      </TouchableOpacity>
                     </View>
 
                     <View style={globalStyles.login_form_help}>
@@ -113,9 +125,11 @@ export const SignUp = (props: Props) => {
                       New to Netflix?
                     </Text>
 
-                    <Text style={globalStyles.login_signup_content2}>
-                      Sign up now.
-                    </Text>
+                    <TouchableOpacity>
+                      <Text style={globalStyles.login_signup_content2}>
+                        Sign up now.
+                      </Text>
+                    </TouchableOpacity>
                   </View>
 
                   <View style={globalStyles.recaptcha_terms_use}>
