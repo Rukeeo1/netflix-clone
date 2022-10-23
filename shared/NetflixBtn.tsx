@@ -9,8 +9,8 @@ interface Props {
 const NetflixBtn = (props: Props) => {
   return (
     <View>
-    <Text style={[styles.buttonText, props.textStyle]}>{props.text}</Text>
-  </View>
+      <Text style={[styles.buttonText, props.textStyle]}>{props.text}</Text>
+    </View>
   );
 };
 
