@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import globalStyles from './global';
 import NetflixSvg from '../../assets/svgs/netflix-upload-emptystate.svg';
@@ -35,6 +35,12 @@ interface Props {
 }
 
 export const Home = (props: Props) => {
+  const [open, setOpen] = useState(false);
+
+  const handleToggle = () => {
+    setOpen(!open);
+  };
+
   return (
     <ScrollView
       style={{ flex: 1 }}
@@ -90,7 +96,7 @@ export const Home = (props: Props) => {
                             <View
                               style={globalStyles.nav_account_dropdown_button}
                             >
-                              <TouchableOpacity>
+                              <TouchableOpacity onPress={handleToggle}>
                                 <View
                                   style={globalStyles.nav_account_profile_link}
                                 >
@@ -112,135 +118,139 @@ export const Home = (props: Props) => {
                   </View>
                 </View>
 
-                <DropdownMenu />
+                {open && <DropdownMenu />}
 
-                <View style={globalStyles.mainView}>
-                  <View style={globalStyles.lolomo_fullbleed}>
-                    <View style={globalStyles.volatile_billboard}>
-                      <View style={globalStyles.billboard_row}>
-                        <View style={globalStyles.billboard_billboardPane}>
-                          <Image
-                            source={netflix_hero}
-                            resizeMode='cover'
-                            style={globalStyles.hero_image_wrapper}
-                          />
+                <View>
+                  <View style={globalStyles.mainView}>
+                    <View style={globalStyles.lolomo_fullbleed}>
+                      <View style={globalStyles.volatile_billboard}>
+                        <View style={globalStyles.billboard_row}>
+                          <View style={globalStyles.billboard_billboardPane}>
+                            <Image
+                              source={netflix_hero}
+                              resizeMode='cover'
+                              style={globalStyles.hero_image_wrapper}
+                            />
 
-                          <View style={globalStyles.info_meta_layer}>
-                            <View style={globalStyles.logo_text__meta_layer}>
-                              <View style={globalStyles.billboard_title}>
-                                <Image
-                                  source={netflix_power}
-                                  style={{
-                                    width: 100,
-                                    resizeMode: 'contain',
-                                  }}
+                            <View style={globalStyles.info_meta_layer}>
+                              <View style={globalStyles.logo_text__meta_layer}>
+                                <View style={globalStyles.billboard_title}>
+                                  <Image
+                                    source={netflix_power}
+                                    style={{
+                                      width: 100,
+                                      resizeMode: 'contain',
+                                    }}
+                                  />
+                                </View>
+
+                                <View style={globalStyles.info_wrapper}>
+                                  <View
+                                    style={globalStyles.synopsis_fade_container}
+                                  >
+                                    <View
+                                      style={
+                                        globalStyles.synopsis_no_supplemental
+                                      }
+                                    >
+                                      <Text
+                                        style={globalStyles.synopsis_track_text}
+                                      >
+                                        In this absorbing crime drama, a
+                                        successful and well liked
+                                      </Text>
+                                      <Text
+                                        style={globalStyles.synopsis_track_text}
+                                      >
+                                        nightclub owner moonlights as a drug
+                                        dealer to New York City's
+                                      </Text>
+                                      <Text
+                                        style={globalStyles.synopsis_track_text}
+                                      >
+                                        A-list users
+                                      </Text>
+                                    </View>
+                                  </View>
+                                </View>
+
+                                <View
+                                  style={globalStyles.billboard_links_player}
+                                >
+                                  <TouchableOpacity>
+                                    <View style={globalStyles.playButton}>
+                                      <FontAwesomeIcon
+                                        icon={faPlay}
+                                        size={12}
+                                        style={globalStyles.faUserPlay}
+                                      />
+
+                                      <Text style={globalStyles.playButtonText}>
+                                        Play
+                                      </Text>
+                                    </View>
+                                  </TouchableOpacity>
+
+                                  <TouchableOpacity>
+                                    <View style={globalStyles.moreButton}>
+                                      <FontAwesomeIcon
+                                        icon={faCircleInfo}
+                                        size={12}
+                                        style={globalStyles.faUserInfo}
+                                      />
+
+                                      <Text style={globalStyles.moreButtonText}>
+                                        More Info
+                                      </Text>
+                                    </View>
+                                  </TouchableOpacity>
+                                </View>
+                              </View>
+                            </View>
+
+                            <View style={globalStyles.embeded_components}>
+                              <View style={globalStyles.actionButtons}>
+                                <FontAwesomeIcon
+                                  icon={faRotateRight}
+                                  size={12.13}
+                                  style={globalStyles.faUserBell}
                                 />
                               </View>
 
-                              <View style={globalStyles.info_wrapper}>
-                                <View
-                                  style={globalStyles.synopsis_fade_container}
-                                >
-                                  <View
-                                    style={
-                                      globalStyles.synopsis_no_supplemental
-                                    }
-                                  >
-                                    <Text
-                                      style={globalStyles.synopsis_track_text}
-                                    >
-                                      In this absorbing crime drama, a
-                                      successful and well liked
-                                    </Text>
-                                    <Text
-                                      style={globalStyles.synopsis_track_text}
-                                    >
-                                      nightclub owner moonlights as a drug
-                                      dealer to New York City's
-                                    </Text>
-                                    <Text
-                                      style={globalStyles.synopsis_track_text}
-                                    >
-                                      A-list users
-                                    </Text>
-                                  </View>
-                                </View>
+                              <View style={globalStyles.maturity_rating}>
+                                <Text style={globalStyles.maturity_number}>
+                                  18+
+                                </Text>
                               </View>
-
-                              <View style={globalStyles.billboard_links_player}>
-                                <TouchableOpacity>
-                                  <View style={globalStyles.playButton}>
-                                    <FontAwesomeIcon
-                                      icon={faPlay}
-                                      size={12}
-                                      style={globalStyles.faUserPlay}
-                                    />
-
-                                    <Text style={globalStyles.playButtonText}>
-                                      Play
-                                    </Text>
-                                  </View>
-                                </TouchableOpacity>
-
-                                <TouchableOpacity>
-                                  <View style={globalStyles.moreButton}>
-                                    <FontAwesomeIcon
-                                      icon={faCircleInfo}
-                                      size={12}
-                                      style={globalStyles.faUserInfo}
-                                    />
-
-                                    <Text style={globalStyles.moreButtonText}>
-                                      More Info
-                                    </Text>
-                                  </View>
-                                </TouchableOpacity>
-                              </View>
-                            </View>
-                          </View>
-
-                          <View style={globalStyles.embeded_components}>
-                            <View style={globalStyles.actionButtons}>
-                              <FontAwesomeIcon
-                                icon={faRotateRight}
-                                size={12.13}
-                                style={globalStyles.faUserBell}
-                              />
-                            </View>
-
-                            <View style={globalStyles.maturity_rating}>
-                              <Text style={globalStyles.maturity_number}>
-                                18+
-                              </Text>
                             </View>
                           </View>
                         </View>
                       </View>
+
+                      <HomeCard />
+
+                      <HomeCard_1 />
+
+                      <HomeCard_2 />
+
+                      <HomeCard_3 />
+
+                      <HomeCard_4 />
+
+                      <HomeCard_5 />
+
+                      <HomeCard_6 />
+
+                      <HomeCard_7 />
+
+                      <HomeCard_8 />
+
+                      <HomeCard_9 />
                     </View>
-
-                    <HomeCard />
-
-                    <HomeCard_1 />
-
-                    <HomeCard_2 />
-
-                    <HomeCard_3 />
-
-                    <HomeCard_4 />
-
-                    <HomeCard_5 />
-
-                    <HomeCard_6 />
-
-                    <HomeCard_7 />
-
-                    <HomeCard_8 />
-
-                    <HomeCard_9 />
                   </View>
-                </View>
 
-                <HomeFooter />
+                  <HomeFooter />
+                </View>
               </View>
             </View>
           </View>
