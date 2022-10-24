@@ -1,12 +1,12 @@
 import React from 'react';
 import { Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
-import CommonText from '../../shared/CommonText';
-import NetflixBtn from '../../shared/NetflixBtn';
+import CommonText from '../../../shared/CommonText';
+import NetflixBtn from '../../../shared/NetflixBtn';
 import { globalStyles } from './global';
-import Hawkins from '../../assets/svgs/hawkins-upload-emptystate.svg';
-import ProfileTransfer from '../../assets/svgs/profile-transfer-upload-emptystate.svg';
-import HawkinsAccount from '../../assets/svgs/hawkins-account-upload-emptystate.svg';
-import HawkinsStandard from '../../assets/svgs/hawkins-standard-upload-emptystate.svg';
+import Hawkins from '../../../assets/svgs/hawkins-upload-emptystate.svg';
+import ProfileTransfer from '../../../assets/svgs/profile-transfer-upload-emptystate.svg';
+import HawkinsAccount from '../../../assets/svgs/hawkins-account-upload-emptystate.svg';
+import HawkinsStandard from '../../../assets/svgs/hawkins-standard-upload-emptystate.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faCaretUp } from '@fortawesome/free-solid-svg-icons';
 
@@ -16,10 +16,11 @@ export const DropdownMenu = (props: Props) => {
   return (
     <View style={globalStyles.account_dropdown_menu}>
       <View style={globalStyles.caret_icon}>
-      <FontAwesomeIcon  icon={faCaretUp}
-                                size={14}
-                                style={{color: 'white'}}
-                                 />
+        <FontAwesomeIcon
+          icon={faCaretUp}
+          size={14}
+          style={{ color: 'white' }}
+        />
       </View>
 
       <View style={globalStyles.ptrack_content}>

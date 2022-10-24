@@ -25,7 +25,9 @@ import { HomeCard_7 } from './HomeCard_7';
 import { HomeCard_8 } from './HomeCard_8';
 import { HomeCard_9 } from './HomeCard_9';
 import { HomeFooter } from './HomeFooter';
-import { DropdownMenu } from '../dropdown/dropdown';
+import { DropdownMenu } from './dropdown/dropdown';
+import { Browse } from './browse/browse';
+import { Notification } from './Notification/Notification';
 
 interface Props {
   slides: {
@@ -36,9 +38,19 @@ interface Props {
 
 export const Home = (props: Props) => {
   const [open, setOpen] = useState(false);
+  const [isOpen, setisOpen] = useState(false);
+  const [isNotice, setisNotice] = useState(false);
 
   const handleToggle = () => {
     setOpen(!open);
+  };
+
+  const handleMenu = () => {
+    setisOpen(!isOpen);
+  };
+
+  const handleNotices = () => {
+    setisNotice(!isNotice);
   };
 
   return (
@@ -60,34 +72,42 @@ export const Home = (props: Props) => {
                           <NetflixSvg style={globalStyles.netflix_logo} />
                         </View>
 
-                        <View style={globalStyles.tabbed_primary_navigation}>
-                          <View style={globalStyles.tabbed_primary_browse}>
-                            <Text
-                              style={globalStyles.tabbed_primary_browse_text}
-                            >
-                              Browse
-                            </Text>
-                          </View>
+                        <TouchableOpacity onPress={handleMenu}>
+                          <View style={globalStyles.tabbed_primary_navigation}>
+                            <View style={globalStyles.tabbed_primary_browse}>
+                              <Text
+                                style={globalStyles.tabbed_primary_browse_text}
+                              >
+                                Browse
+                              </Text>
+                            </View>
 
-                          <FontAwesomeIcon
-                            icon={faCaretDown}
-                            size={16}
-                            style={globalStyles.faUserIcon}
-                          />
-                        </View>
+                            <FontAwesomeIcon
+                              icon={faCaretDown}
+                              size={16}
+                              style={globalStyles.faUserIcon}
+                            />
+                          </View>
+                        </TouchableOpacity>
                       </View>
+
+                      {isOpen && <Browse />}
+
+                      {isNotice && <Notification />}
 
                       <View style={globalStyles.secondary_navigation}>
                         <View style={globalStyles.nav_element}></View>
                         <View style={globalStyles.nav_element_notification}>
                           <View style={globalStyles.nav_span_notification}>
-                            <View style={globalStyles.nav_notification_menu}>
-                              <FontAwesomeIcon
-                                icon={faBell}
-                                size={24}
-                                style={globalStyles.faUserBell}
-                              />
-                            </View>
+                            <TouchableOpacity onPress={handleNotices}>
+                              <View style={globalStyles.nav_notification_menu}>
+                                <FontAwesomeIcon
+                                  icon={faBell}
+                                  size={24}
+                                  style={globalStyles.faUserBell}
+                                />
+                              </View>
+                            </TouchableOpacity>
                           </View>
                         </View>
 
