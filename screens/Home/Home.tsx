@@ -37,22 +37,6 @@ interface Props {
 }
 
 export const Home = (props: Props) => {
-  const [open, setOpen] = useState(false);
-  const [isOpen, setisOpen] = useState(false);
-  const [isNotice, setisNotice] = useState(false);
-
-  const handleToggle = () => {
-    setOpen(!open);
-  };
-
-  const handleMenu = () => {
-    setisOpen(!isOpen);
-  };
-
-  const handleNotices = () => {
-    setisNotice(!isNotice);
-  };
-
   return (
     <ScrollView
       style={{ flex: 1 }}
@@ -64,81 +48,7 @@ export const Home = (props: Props) => {
           <View style={globalStyles.netflix_dir_ltr}>
             <View>
               <View style={globalStyles.netflix_dark_background}>
-                <View style={globalStyles.pinning_header}>
-                  <View style={globalStyles.pinning_header_container}>
-                    <View style={globalStyles.main_header_menu_navigation}>
-                      <View style={globalStyles.main_netflix_logo_content}>
-                        <View style={globalStyles.svg_nfLogo}>
-                          <NetflixSvg style={globalStyles.netflix_logo} />
-                        </View>
-
-                        <TouchableOpacity onPress={handleMenu}>
-                          <View style={globalStyles.tabbed_primary_navigation}>
-                            <View style={globalStyles.tabbed_primary_browse}>
-                              <Text
-                                style={globalStyles.tabbed_primary_browse_text}
-                              >
-                                Browse
-                              </Text>
-                            </View>
-
-                            <FontAwesomeIcon
-                              icon={faCaretDown}
-                              size={16}
-                              style={globalStyles.faUserIcon}
-                            />
-                          </View>
-                        </TouchableOpacity>
-                      </View>
-
-                      {isOpen && <Browse />}
-
-                      {isNotice && <Notification />}
-
-                      <View style={globalStyles.secondary_navigation}>
-                        <View style={globalStyles.nav_element}></View>
-                        <View style={globalStyles.nav_element_notification}>
-                          <View style={globalStyles.nav_span_notification}>
-                            <TouchableOpacity onPress={handleNotices}>
-                              <View style={globalStyles.nav_notification_menu}>
-                                <FontAwesomeIcon
-                                  icon={faBell}
-                                  size={24}
-                                  style={globalStyles.faUserBell}
-                                />
-                              </View>
-                            </TouchableOpacity>
-                          </View>
-                        </View>
-
-                        <View style={globalStyles.nav_element_blue_icon}>
-                          <View style={globalStyles.nav_account_menu_item}>
-                            <View
-                              style={globalStyles.nav_account_dropdown_button}
-                            >
-                              <TouchableOpacity onPress={handleToggle}>
-                                <View
-                                  style={globalStyles.nav_account_profile_link}
-                                >
-                                  <Image
-                                    source={profile_logo}
-                                    style={{
-                                      width: 32,
-                                      height: 32,
-                                      resizeMode: 'contain',
-                                    }}
-                                  />
-                                </View>
-                              </TouchableOpacity>
-                            </View>
-                          </View>
-                        </View>
-                      </View>
-                    </View>
-                  </View>
-                </View>
-
-                {open && <DropdownMenu />}
+                <DropdownMenu />
 
                 <View>
                   <View style={globalStyles.mainView}>

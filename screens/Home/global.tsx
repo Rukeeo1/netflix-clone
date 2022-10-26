@@ -2,8 +2,7 @@ import { StyleSheet } from 'react-native';
 
 const globalStyles = StyleSheet.create({
   scrollview: {
-    backgroundColor: '#fff',
-    paddingTop: 40,
+    backgroundColor: '#000',
   },
 
   HomeMountPoint: {
@@ -34,142 +33,8 @@ const globalStyles = StyleSheet.create({
     position: 'relative',
   },
 
-  pinning_header: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: 375,
-    height: 70,
-    zIndex: 1,
-  },
-
-  pinning_header_container: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: 375,
-    height: 41,
-  },
-
-  main_header_menu_navigation: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    width: 375,
-    paddingHorizontal: 15,
-    fontSize: 19.2,
-    position: 'relative',
-    backgroundColor: 'transparent',
-  },
-
-  main_netflix_logo_content: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    width: '50%',
-  },
-
-  svg_nfLogo: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: 75,
-    height: 45,
-    marginLeft: '3%',
-  },
-
-  netflix_logo: {
-    height: 20,
-    paddingTop: 12,
-    width: 75,
-  },
-
-  tabbed_primary_navigation: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: 64.25,
-  },
-
-  tabbed_primary_browse: {
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-
-  tabbed_primary_browse_text: {
-    color: '#fff',
-    fontSize: 9,
-  },
-
-  faUserIcon: {
-    color: '#fff',
-    marginLeft: 4,
-  },
-
-  secondary_navigation: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: 88,
-  },
-
-  nav_element: {},
-
-  nav_element_notification: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: 36,
-    height: '100%',
-    color: '#fff',
-    marginRight: 10,
-    fontSize: 19.2,
-  },
-
-  nav_span_notification: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: 36,
-  },
-
-  nav_notification_menu: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: 36,
-    height: '100%',
-    paddingTop: 2,
-    paddingHorizontal: 6,
-    paddingBottom: 3,
-    marginTop: 3,
-  },
-
-  netflix_bell: {
-    width: 24,
-    height: 24,
-  },
-
   faUserBell: {
     color: '#fff',
-  },
-
-  nav_element_blue_icon: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: 32,
-  },
-
-  nav_account_menu_item: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: 32,
-  },
-
-  nav_account_dropdown_button: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: 32,
-  },
-
-  nav_account_profile_link: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: 32,
   },
 
   mainView: {
@@ -185,7 +50,6 @@ const globalStyles = StyleSheet.create({
     justifyContent: 'center',
     width: 375,
     paddingBottom: 50,
-    // marginTop: -70,
     zIndex: 0,
   },
 
@@ -516,7 +380,6 @@ const globalStyles = StyleSheet.create({
     justifyContent: 'center',
     width: 375,
     marginBottom: 19.2,
-    // marginVertical: 57.6,
   },
 
   rowContainer_title_card_1: {
