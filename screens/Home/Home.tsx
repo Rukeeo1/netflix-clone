@@ -1,5 +1,12 @@
-import React, { useState } from 'react';
-import { Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
+import React, { useRef, useState } from 'react';
+import {
+  Image,
+  Pressable,
+  ScrollView,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import globalStyles from './global';
 import NetflixSvg from '../../assets/svgs/netflix-upload-emptystate.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
@@ -29,14 +36,14 @@ import { DropdownMenu } from './dropdown/dropdown';
 import { Browse } from './browse/browse';
 import { Notification } from './Notification/Notification';
 
-interface Props {
-  slides: {
-    id: number;
-    image: string;
-  };
-}
+// interface Props {
+//   slides: {
+//     id: number;
+//     image: string;
+//   };
+// }
 
-export const Home = (props: Props) => {
+export const Home = () => {
   const [open, setOpen] = useState(false);
   const [isOpen, setisOpen] = useState(false);
   const [isNotice, setisNotice] = useState(false);
@@ -64,14 +71,15 @@ export const Home = (props: Props) => {
           <View style={globalStyles.netflix_dir_ltr}>
             <View>
               <View style={globalStyles.netflix_dark_background}>
-                <View style={globalStyles.pinning_header}>
+                
+                {/* <View style={globalStyles.pinning_header}>
                   <View style={globalStyles.pinning_header_container}>
                     <View style={globalStyles.main_header_menu_navigation}>
                       <View style={globalStyles.main_netflix_logo_content}>
                         <View style={globalStyles.svg_nfLogo}>
                           <NetflixSvg style={globalStyles.netflix_logo} />
                         </View>
-
+           
                         <TouchableOpacity onPress={handleMenu}>
                           <View style={globalStyles.tabbed_primary_navigation}>
                             <View style={globalStyles.tabbed_primary_browse}>
@@ -89,6 +97,7 @@ export const Home = (props: Props) => {
                             />
                           </View>
                         </TouchableOpacity>
+             
                       </View>
 
                       {isOpen && <Browse />}
@@ -136,7 +145,7 @@ export const Home = (props: Props) => {
                       </View>
                     </View>
                   </View>
-                </View>
+                </View> */}
 
                 {open && <DropdownMenu />}
 
