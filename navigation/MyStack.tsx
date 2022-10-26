@@ -3,12 +3,13 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { Home } from '../screens/Home/Home';
 import { SignUp } from '../screens/SignUp/SignUp';
 import Header from '../shared/Header';
+import SignUpHeader from '../shared/SignUpHeader';
 
 const Stack = createStackNavigator();
 
 const MyStack = () => {
   return (
-    <Stack.Navigator initialRouteName='Home'>
+    <Stack.Navigator initialRouteName='SignUp'>
       <Stack.Screen
         name='Home'
         component={Home}
@@ -21,7 +22,18 @@ const MyStack = () => {
           },
         }}
       />
-      <Stack.Screen name='SignUp' component={SignUp} />
+      <Stack.Screen
+        name='SignUp'
+        component={SignUp}
+        options={{
+          headerTitle: () => <SignUpHeader />,
+
+          headerStyle: {
+            backgroundColor: '#000',
+            height: 80,
+          },
+        }}
+      />
     </Stack.Navigator>
   );
 };
