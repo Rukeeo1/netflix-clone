@@ -2,8 +2,7 @@ import { StyleSheet } from 'react-native';
 
 const globalStyles = StyleSheet.create({
   scrollview: {
-    backgroundColor: '#fff',
-    paddingTop: 40,
+    backgroundColor: '#000',
   },
 
   SignUpMountPoint: {

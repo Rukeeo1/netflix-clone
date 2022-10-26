@@ -1,13 +1,6 @@
 import React from 'react';
-import {
-  ScrollView,
-  Text,
-  Touchable,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import globalStyles from './global';
-import NetflixSvg from '../../assets/svgs/netflix-upload-emptystate.svg';
 import { TextInput } from '@react-native-material/core';
 import NetflixBtn from '../../shared/NetflixBtn';
 import Checkbox from 'expo-checkbox';
@@ -23,11 +16,6 @@ export const SignUp = (props: Props) => {
       <View style={globalStyles.SignUpMountPoint}>
         <View style={globalStyles.loginWrapper}>
           <View></View>
-          <View style={globalStyles.login_header_container}>
-            <View style={globalStyles.svg_nfLogo}>
-              <NetflixSvg style={globalStyles.netflix_logo} />
-            </View>
-          </View>
 
           <View style={globalStyles.login_body}>
             <View style={globalStyles.login_content}>
