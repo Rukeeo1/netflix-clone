@@ -1,17 +1,8 @@
-import React, { useRef, useState } from 'react';
-import {
-  Image,
-  Pressable,
-  ScrollView,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import React from 'react';
+import { Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import globalStyles from './global';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import {
-  faBell,
-  faCaretDown,
   faCircleInfo,
   faPlay,
   faRotateRight,
