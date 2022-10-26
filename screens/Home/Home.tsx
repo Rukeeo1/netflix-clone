@@ -8,7 +8,6 @@ import {
   View,
 } from 'react-native';
 import globalStyles from './global';
-import NetflixSvg from '../../assets/svgs/netflix-upload-emptystate.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import {
   faBell,
@@ -17,7 +16,6 @@ import {
   faPlay,
   faRotateRight,
 } from '@fortawesome/free-solid-svg-icons';
-import profile_logo from '../../assets/images/profile_logo.png';
 import netflix_hero from '../../assets/images/netflix_hero_image.webp';
 import netflix_power from '../../assets/images/netflix_power.webp';
 import slides from '../../Components/NetflixImages';
@@ -33,33 +31,8 @@ import { HomeCard_8 } from './HomeCard_8';
 import { HomeCard_9 } from './HomeCard_9';
 import { HomeFooter } from './HomeFooter';
 import { DropdownMenu } from './dropdown/dropdown';
-import { Browse } from './browse/browse';
-import { Notification } from './Notification/Notification';
-
-// interface Props {
-//   slides: {
-//     id: number;
-//     image: string;
-//   };
-// }
 
 export const Home = () => {
-  const [open, setOpen] = useState(false);
-  const [isOpen, setisOpen] = useState(false);
-  const [isNotice, setisNotice] = useState(false);
-
-  const handleToggle = () => {
-    setOpen(!open);
-  };
-
-  const handleMenu = () => {
-    setisOpen(!isOpen);
-  };
-
-  const handleNotices = () => {
-    setisNotice(!isNotice);
-  };
-
   return (
     <ScrollView
       style={{ flex: 1 }}
@@ -71,83 +44,7 @@ export const Home = () => {
           <View style={globalStyles.netflix_dir_ltr}>
             <View>
               <View style={globalStyles.netflix_dark_background}>
-                
-                {/* <View style={globalStyles.pinning_header}>
-                  <View style={globalStyles.pinning_header_container}>
-                    <View style={globalStyles.main_header_menu_navigation}>
-                      <View style={globalStyles.main_netflix_logo_content}>
-                        <View style={globalStyles.svg_nfLogo}>
-                          <NetflixSvg style={globalStyles.netflix_logo} />
-                        </View>
-           
-                        <TouchableOpacity onPress={handleMenu}>
-                          <View style={globalStyles.tabbed_primary_navigation}>
-                            <View style={globalStyles.tabbed_primary_browse}>
-                              <Text
-                                style={globalStyles.tabbed_primary_browse_text}
-                              >
-                                Browse
-                              </Text>
-                            </View>
-
-                            <FontAwesomeIcon
-                              icon={faCaretDown}
-                              size={16}
-                              style={globalStyles.faUserIcon}
-                            />
-                          </View>
-                        </TouchableOpacity>
-             
-                      </View>
-
-                      {isOpen && <Browse />}
-
-                      {isNotice && <Notification />}
-
-                      <View style={globalStyles.secondary_navigation}>
-                        <View style={globalStyles.nav_element}></View>
-                        <View style={globalStyles.nav_element_notification}>
-                          <View style={globalStyles.nav_span_notification}>
-                            <TouchableOpacity onPress={handleNotices}>
-                              <View style={globalStyles.nav_notification_menu}>
-                                <FontAwesomeIcon
-                                  icon={faBell}
-                                  size={24}
-                                  style={globalStyles.faUserBell}
-                                />
-                              </View>
-                            </TouchableOpacity>
-                          </View>
-                        </View>
-
-                        <View style={globalStyles.nav_element_blue_icon}>
-                          <View style={globalStyles.nav_account_menu_item}>
-                            <View
-                              style={globalStyles.nav_account_dropdown_button}
-                            >
-                              <TouchableOpacity onPress={handleToggle}>
-                                <View
-                                  style={globalStyles.nav_account_profile_link}
-                                >
-                                  <Image
-                                    source={profile_logo}
-                                    style={{
-                                      width: 32,
-                                      height: 32,
-                                      resizeMode: 'contain',
-                                    }}
-                                  />
-                                </View>
-                              </TouchableOpacity>
-                            </View>
-                          </View>
-                        </View>
-                      </View>
-                    </View>
-                  </View>
-                </View> */}
-
-                {open && <DropdownMenu />}
+                <DropdownMenu />
 
                 <View>
                   <View style={globalStyles.mainView}>
