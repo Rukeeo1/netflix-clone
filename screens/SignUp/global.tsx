@@ -17,27 +17,6 @@ const globalStyles = StyleSheet.create({
     width: 375,
   },
 
-  login_header_container: {
-    alignItems: 'flex-start',
-    justifyContent: 'center',
-    width: 375,
-    height: 45,
-  },
-
-  svg_nfLogo: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: 75,
-    height: 45,
-    marginLeft: '3%',
-  },
-
-  netflix_logo: {
-    height: 20,
-    paddingTop: 12,
-    width: 75,
-  },
-
   login_body: {
     alignItems: 'center',
     justifyContent: 'center',
