@@ -1,16 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import globalStyles from './global';
-import NetflixSvg from '../../assets/svgs/netflix-upload-emptystate.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import {
-  faBell,
-  faCaretDown,
   faCircleInfo,
   faPlay,
   faRotateRight,
 } from '@fortawesome/free-solid-svg-icons';
-import profile_logo from '../../assets/images/profile_logo.png';
 import netflix_hero from '../../assets/images/netflix_hero_image.webp';
 import netflix_power from '../../assets/images/netflix_power.webp';
 import slides from '../../Components/NetflixImages';
@@ -26,9 +22,6 @@ import { HomeCard_8 } from './HomeCard_8';
 import { HomeCard_9 } from './HomeCard_9';
 import { HomeFooter } from './HomeFooter';
 import { DropdownMenu } from './dropdown/dropdown';
-import { Browse } from './browse/browse';
-import { Notification } from './Notification/Notification';
-
 interface Props {
   slides: {
     id: number;
