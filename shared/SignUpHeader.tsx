@@ -1,5 +1,3 @@
-import { faBell, faCaretDown } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import NetflixSvg from '../assets/svgs/netflix-upload-emptystate.svg';
 import React from 'react';
 import { StyleSheet, Image, Text, View } from 'react-native';
