@@ -6,13 +6,17 @@ import React, { useState } from 'react';
 import { StyleSheet, Image, Text, View } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { DropdownMenu } from '../screens/Home/dropdown/dropdown';
+import { Notification } from '../screens/Home/Notification/Notification';
+import { Browse } from '../screens/Home/browse/browse';
 
 interface Props {
   title: string;
 }
 
 export default function Header(props: Props) {
+  const [browse, setBrowse] = useState(false);
   const [openProfile, setOpenProfile] = useState(false);
+  const [notices, setNotices] = useState(false);
 
   return (
     <View style={styles.pinning_header}>
@@ -23,7 +27,7 @@ export default function Header(props: Props) {
               <NetflixSvg style={styles.netflix_logo} />
             </View>
 
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => setBrowse(!browse)}>
               <View style={styles.tabbed_primary_navigation}>
                 <View style={styles.tabbed_primary_browse}>
                   <Text style={styles.tabbed_primary_browse_text}>Browse</Text>
@@ -36,13 +40,15 @@ export default function Header(props: Props) {
                 />
               </View>
             </TouchableOpacity>
+
+            {browse && <Browse />}
           </View>
 
           <View style={styles.secondary_navigation}>
             <View style={styles.nav_element}></View>
             <View style={styles.nav_element_notification}>
               <View style={styles.nav_span_notification}>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => setNotices(!notices)}>
                   <View style={styles.nav_notification_menu}>
                     <FontAwesomeIcon
                       icon={faBell}
@@ -54,10 +60,14 @@ export default function Header(props: Props) {
               </View>
             </View>
 
+            {notices && <Notification />}
+
             <View style={styles.nav_element_blue_icon}>
               <View style={styles.nav_account_menu_item}>
                 <View style={styles.nav_account_dropdown_button}>
-                  <TouchableOpacity onPress={() => setOpenProfile(!openProfile)}>
+                  <TouchableOpacity
+                    onPress={() => setOpenProfile(!openProfile)}
+                  >
                     <View style={styles.nav_account_profile_link}>
                       <Image
                         source={profile_logo}
