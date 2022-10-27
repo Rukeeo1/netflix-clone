@@ -9,7 +9,6 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import netflix_hero from '../../assets/images/netflix_hero_image.webp';
 import netflix_power from '../../assets/images/netflix_power.webp';
-import slides from '../../Components/NetflixImages';
 import { HomeCard_2 } from './HomeCard_2';
 import { HomeCard_1 } from './HomeCard_1';
 import { HomeCard_3 } from './HomeCard_3';
