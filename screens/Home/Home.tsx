@@ -9,7 +9,6 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import netflix_hero from '../../assets/images/netflix_hero_image.webp';
 import netflix_power from '../../assets/images/netflix_power.webp';
-import slides from '../../Components/NetflixImages';
 import { HomeCard_2 } from './HomeCard_2';
 import { HomeCard_1 } from './HomeCard_1';
 import { HomeCard_3 } from './HomeCard_3';
@@ -21,12 +20,8 @@ import { HomeCard_7 } from './HomeCard_7';
 import { HomeCard_8 } from './HomeCard_8';
 import { HomeCard_9 } from './HomeCard_9';
 import { HomeFooter } from './HomeFooter';
-interface Props {
-  slides: {
-    id: number;
-    image: string;
-  };
-}
+
+interface Props {}
 
 export const Home = (props: Props) => {
   return (
