@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { FC } from 'react';
 import { Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import globalStyles from './global';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
