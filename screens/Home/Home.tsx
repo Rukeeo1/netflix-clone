@@ -41,8 +41,6 @@ export const Home = (props: Props) => {
           <View style={globalStyles.netflix_dir_ltr}>
             <View>
               <View style={globalStyles.netflix_dark_background}>
-                <DropdownMenu />
-
                 <View>
                   <View style={globalStyles.mainView}>
                     <View style={globalStyles.lolomo_fullbleed}>
