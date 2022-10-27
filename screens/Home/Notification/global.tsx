@@ -4,14 +4,14 @@ export const globalStyles = StyleSheet.create({
   notification_container: {
     alignItems: 'center',
     justifyContent: 'center',
-    // width: 408,
-    width: 318,
+    width: 340,
     height: 387,
     backgroundColor: 'rgba(0,0,0,.9)',
     borderWidth: 1,
     borderColor: 'hsla(0,0%,100%,.15)',
     position: 'absolute',
     top: 71,
+    right: 0,
     zIndex: 1,
   },
 
@@ -20,7 +20,7 @@ export const globalStyles = StyleSheet.create({
     justifyContent: 'center',
     borderWidth: 1,
     borderColor: '#ffffff',
-    width: 317,
+    width: 340,
   },
 
   notification: {
@@ -29,33 +29,28 @@ export const globalStyles = StyleSheet.create({
     width: 340,
     borderBottomWidth: 1,
     borderBottomColor: 'hsla(0,0%,100%,.15)',
-    // width: 408,
   },
 
   notification_content: {
     alignItems: 'center',
     justifyContent: 'center',
-    // width: 408,
   },
 
   image_text_notification: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    // width: 408,
   },
 
   elemnent_image_text_notification: {
     alignItems: 'center',
     justifyContent: 'center',
     padding: 16,
-    // width: 144,
   },
 
   elemnent_image_text_notification1: {
     alignItems: 'center',
     justifyContent: 'center',
     padding: 16,
-    // width: 264,
   },
 });
