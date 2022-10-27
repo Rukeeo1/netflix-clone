@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import globalStyles from './global';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
@@ -23,7 +23,7 @@ import { HomeFooter } from './HomeFooter';
 
 interface Props {}
 
-export const Home = (props: Props) => {
+export const Home: FC<Props> = () => {
   return (
     <ScrollView
       style={{ flex: 1 }}
