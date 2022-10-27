@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { FC } from 'react';
+import { useNavigation } from '@react-navigation/native';
 import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import globalStyles from './global';
 import { TextInput } from '@react-native-material/core';
@@ -7,7 +8,9 @@ import Checkbox from 'expo-checkbox';
 
 interface Props {}
 
-export const SignUp = (props: Props) => {
+export const SignUp: FC<Props> = () => {
+  const navigation: any = useNavigation();
+
   return (
     <ScrollView
       style={{ flex: 1 }}
@@ -81,7 +84,11 @@ export const SignUp = (props: Props) => {
                     </View>
 
                     <View style={globalStyles.login_button_container}>
-                      <TouchableOpacity>
+                      <TouchableOpacity
+                        onPress={() => {
+                          navigation.navigate('Home');
+                        }}
+                      >
                         <View style={globalStyles.button}>
                           <NetflixBtn text='Sign In' textStyle={{}} />
                         </View>

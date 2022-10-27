@@ -1,6 +1,5 @@
 import 'react-native-gesture-handler';
-import React, { FC } from 'react';
-import { SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native';
+import React, { FC, useState } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { Home } from './screens/Home/Home';
 import { SignUp } from './screens/SignUp/SignUp';

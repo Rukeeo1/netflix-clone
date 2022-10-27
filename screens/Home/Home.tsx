@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC, useState } from 'react';
 import { Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import globalStyles from './global';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
@@ -23,7 +23,9 @@ import { HomeCard_9 } from './HomeCard_9';
 import { HomeFooter } from './HomeFooter';
 import { DropdownMenu } from './dropdown/dropdown';
 
-export const Home = () => {
+interface Props {}
+
+export const Home: FC<Props> = () => {
   return (
     <ScrollView
       style={{ flex: 1 }}
@@ -35,7 +37,7 @@ export const Home = () => {
           <View style={globalStyles.netflix_dir_ltr}>
             <View>
               <View style={globalStyles.netflix_dark_background}>
-                <DropdownMenu />
+                {/* <DropdownMenu /> */}
 
                 <View>
                   <View style={globalStyles.mainView}>

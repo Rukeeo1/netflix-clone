@@ -2,16 +2,18 @@ import { faBell, faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import NetflixSvg from '../assets/svgs/netflix-upload-emptystate.svg';
 import profile_logo from '../assets/images/profile_logo.png';
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, Image, Text, View } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import { DropdownMenu } from '../screens/Home/dropdown/dropdown';
 
 interface Props {
-  navigation: any;
   title: string;
 }
 
-export default function Header() {
+export default function Header(props: Props) {
+  const [openProfile, setOpenProfile] = useState(false);
+
   return (
     <View style={styles.pinning_header}>
       <View style={styles.pinning_header_container}>
@@ -55,7 +57,7 @@ export default function Header() {
             <View style={styles.nav_element_blue_icon}>
               <View style={styles.nav_account_menu_item}>
                 <View style={styles.nav_account_dropdown_button}>
-                  <TouchableOpacity>
+                  <TouchableOpacity onPress={() => setOpenProfile(!openProfile)}>
                     <View style={styles.nav_account_profile_link}>
                       <Image
                         source={profile_logo}
@@ -70,6 +72,8 @@ export default function Header() {
                 </View>
               </View>
             </View>
+
+            {openProfile && <DropdownMenu />}
           </View>
         </View>
       </View>

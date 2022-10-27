@@ -7,20 +7,19 @@ import SignUpHeader from '../shared/SignUpHeader';
 
 const Stack = createStackNavigator();
 
-interface Props {}
-
-const MyStack = (props: Props) => {
+const MyStack = () => {
   return (
-    <Stack.Navigator initialRouteName='SignUp'>
+    <Stack.Navigator initialRouteName='Home'>
       <Stack.Screen
         name='Home'
         component={Home}
         options={{
-          headerTitle: (props) => <Header />,
+          headerLeft: () => null,
+          headerTitle: () => <Header title={''} />,
 
           headerStyle: {
             backgroundColor: '#000',
-            height: 85,
+            height: 80,
           },
         }}
       />
@@ -28,11 +27,11 @@ const MyStack = (props: Props) => {
         name='SignUp'
         component={SignUp}
         options={{
-          headerTitle: (props) => <SignUpHeader />,
+          headerTitle: () => <SignUpHeader />,
 
           headerStyle: {
             backgroundColor: '#000',
-            height: 85,
+            height: 80,
           },
         }}
       />
