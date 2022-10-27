@@ -21,7 +21,6 @@ import { HomeCard_7 } from './HomeCard_7';
 import { HomeCard_8 } from './HomeCard_8';
 import { HomeCard_9 } from './HomeCard_9';
 import { HomeFooter } from './HomeFooter';
-import { DropdownMenu } from './dropdown/dropdown';
 
 interface Props {}
 
@@ -37,8 +36,6 @@ export const Home: FC<Props> = () => {
           <View style={globalStyles.netflix_dir_ltr}>
             <View>
               <View style={globalStyles.netflix_dark_background}>
-                {/* <DropdownMenu /> */}
-
                 <View>
                   <View style={globalStyles.mainView}>
                     <View style={globalStyles.lolomo_fullbleed}>
