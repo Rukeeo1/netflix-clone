@@ -7,7 +7,7 @@ export const globalStyles = StyleSheet.create({
     width: 220,
     position: 'absolute',
     top: 69,
-    right: '26.09%',
+    right: '2%',
     marginLeft: 0,
     opacity: 1,
     borderWidth: 1,
