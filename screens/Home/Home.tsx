@@ -21,7 +21,6 @@ import { HomeCard_7 } from './HomeCard_7';
 import { HomeCard_8 } from './HomeCard_8';
 import { HomeCard_9 } from './HomeCard_9';
 import { HomeFooter } from './HomeFooter';
-import { DropdownMenu } from './dropdown/dropdown';
 interface Props {
   slides: {
     id: number;
