@@ -1,8 +1,8 @@
+import React, { useState, useRef, useEffect } from 'react';
 import { faBell, faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import NetflixSvg from '../assets/svgs/netflix-upload-emptystate.svg';
 import profile_logo from '../assets/images/profile_logo.png';
-import React, { useState } from 'react';
 import { StyleSheet, Image, Text, View } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { DropdownMenu } from '../screens/Home/dropdown/dropdown';
