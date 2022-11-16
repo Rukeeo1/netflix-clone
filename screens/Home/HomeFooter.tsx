@@ -1,6 +1,6 @@
 import React from 'react';
 import { Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
-import globalStyles from './global';
+import globalStyles from './style';
 import Facebook from '../../assets/svgs/facebook-upload-emptystate.svg';
 import Instagram from '../../assets/svgs/instagram-upload-emptystate.svg';
 import Youtube from '../../assets/svgs/youtube-upload-emptystate.svg';

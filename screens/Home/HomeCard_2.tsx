@@ -1,18 +1,9 @@
 import React from 'react';
 import { Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
-import globalStyles from './global';
-import Rank_1 from '../../assets/svgs/rank_1-upload-emptystate.svg';
-import Rank_2 from '../../assets/svgs/rank_2-upload-emptystate.svg';
-import Rank_3 from '../../assets/svgs/rank_3-upload-emptystate.svg';
-import Rank_4 from '../../assets/svgs/rank_4-upload-emptystate.svg';
-import Rank_5 from '../../assets/svgs/rank_5-upload-emptystate.svg';
-import Rank_6 from '../../assets/svgs/rank_6-upload-emptystate.svg';
-import Rank_7 from '../../assets/svgs/rank_7-upload-emptystate.svg';
-import Rank_8 from '../../assets/svgs/rank_8-upload-emptystate.svg';
-import Rank_9 from '../../assets/svgs/rank_9-upload-emptystate.svg';
-import Rank_10 from '../../assets/svgs/rank_10-upload-emptystate.svg';
+import globalStyles from './style';
 import slides from '../../Components/NetflixImages';
 import CommonText from '../../shared/CommonText';
+import Svgs from '../../assets/svgs';
 
 interface Props {}
 
@@ -21,7 +12,10 @@ export const HomeCard_2 = (props: Props) => {
     <View style={globalStyles.lolomoRow_title_card_2}>
       <View style={globalStyles.rowHeader_ltr}>
         <View style={globalStyles.rowTitle_ltr0}>
-          <CommonText title='Top 10 TV Movies in Nigeria Today' titleStyle={{}} />
+          <CommonText
+            title='Top 10 TV Movies in Nigeria Today'
+            titleStyle={{}}
+          />
         </View>
       </View>
 
@@ -41,7 +35,7 @@ export const HomeCard_2 = (props: Props) => {
                         <View style={globalStyles.titleCard_Container}>
                           <View style={globalStyles.boxArt_size}>
                             <View style={globalStyles.rank_1_container}>
-                              <Rank_1 />
+                              <Svgs.Rank1 />
                             </View>
 
                             <Image
@@ -64,7 +58,7 @@ export const HomeCard_2 = (props: Props) => {
                         <View style={globalStyles.titleCard_Container}>
                           <View style={globalStyles.boxArt_size}>
                             <View style={globalStyles.rank_1_container}>
-                              <Rank_2 />
+                              <Svgs.Rank2 />
                             </View>
 
                             <Image
@@ -87,7 +81,7 @@ export const HomeCard_2 = (props: Props) => {
                         <View style={globalStyles.titleCard_Container}>
                           <View style={globalStyles.boxArt_size}>
                             <View style={globalStyles.rank_1_container}>
-                              <Rank_3 />
+                              <Svgs.Rank3 />
                             </View>
 
                             <Image
@@ -110,7 +104,7 @@ export const HomeCard_2 = (props: Props) => {
                         <View style={globalStyles.titleCard_Container}>
                           <View style={globalStyles.boxArt_size}>
                             <View style={globalStyles.rank_1_container}>
-                              <Rank_4 />
+                              <Svgs.Rank4 />
                             </View>
 
                             <Image
@@ -133,7 +127,7 @@ export const HomeCard_2 = (props: Props) => {
                         <View style={globalStyles.titleCard_Container}>
                           <View style={globalStyles.boxArt_size}>
                             <View style={globalStyles.rank_1_container}>
-                              <Rank_5 />
+                              <Svgs.Rank5 />
                             </View>
 
                             <Image
@@ -156,7 +150,7 @@ export const HomeCard_2 = (props: Props) => {
                         <View style={globalStyles.titleCard_Container}>
                           <View style={globalStyles.boxArt_size}>
                             <View style={globalStyles.rank_1_container}>
-                              <Rank_6 />
+                              <Svgs.Rank6 />
                             </View>
 
                             <Image
@@ -179,7 +173,7 @@ export const HomeCard_2 = (props: Props) => {
                         <View style={globalStyles.titleCard_Container}>
                           <View style={globalStyles.boxArt_size}>
                             <View style={globalStyles.rank_1_container}>
-                              <Rank_7 />
+                              <Svgs.Rank7 />
                             </View>
 
                             <Image
@@ -202,7 +196,7 @@ export const HomeCard_2 = (props: Props) => {
                         <View style={globalStyles.titleCard_Container}>
                           <View style={globalStyles.boxArt_size}>
                             <View style={globalStyles.rank_1_container}>
-                              <Rank_8 />
+                              <Svgs.Rank8 />
                             </View>
 
                             <Image
@@ -225,7 +219,7 @@ export const HomeCard_2 = (props: Props) => {
                         <View style={globalStyles.titleCard_Container}>
                           <View style={globalStyles.boxArt_size}>
                             <View style={globalStyles.rank_1_container}>
-                              <Rank_9 />
+                              <Svgs.Rank9 />
                             </View>
 
                             <Image
@@ -248,7 +242,7 @@ export const HomeCard_2 = (props: Props) => {
                         <View style={globalStyles.titleCard_Container}>
                           <View style={globalStyles.boxArt_size}>
                             <View style={globalStyles.rank_1_container}>
-                              <Rank_10 />
+                              <Svgs.Rank10 />
                             </View>
 
                             <Image

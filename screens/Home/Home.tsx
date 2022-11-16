@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
-import globalStyles from './global';
+import globalStyles from './style';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import {
   faCircleInfo,

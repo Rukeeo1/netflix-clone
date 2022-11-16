@@ -1,6 +1,6 @@
 import React from 'react';
 import { Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
-import globalStyles from './global';
+import globalStyles from './style';
 import slides from '../../Components/NetflixImages';
 import CommonText from '../../shared/CommonText';
 

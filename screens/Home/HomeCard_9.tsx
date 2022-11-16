@@ -1,10 +1,12 @@
 import React from 'react';
-import { Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
-import globalStyles from './global';
+import { Image, ScrollView, TouchableOpacity, View } from 'react-native';
+import globalStyles from './style';
 import slides from '../../Components/NetflixImages';
 import CommonText from '../../shared/CommonText';
 
 export const HomeCard_9 = () => {
+
+  
   return (
     <View style={globalStyles.lolomoRow_title_card_1}>
       <View style={globalStyles.rowHeader_ltr}>

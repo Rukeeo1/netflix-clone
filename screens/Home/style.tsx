@@ -1,9 +1,11 @@
 import { StyleSheet } from 'react-native';
 
-const globalStyles = StyleSheet.create({
+const homeStyles = StyleSheet.create({
   scrollview: {
     backgroundColor: '#000',
   },
+
+  faUserIcon: {},
 
   HomeMountPoint: {
     alignItems: 'center',
@@ -527,4 +529,4 @@ const globalStyles = StyleSheet.create({
   },
 });
 
-export default globalStyles;
+export default homeStyles;

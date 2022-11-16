@@ -1,25 +1,11 @@
 import React, { useRef, useState } from 'react';
 import {
-  Animated,
-  Dimensions,
-  FlatList,
   Image,
   ScrollView,
-  Text,
   TouchableOpacity,
   View,
 } from 'react-native';
-import globalStyles from './global';
-import Rank_1 from '../../assets/svgs/rank_1-upload-emptystate.svg';
-import Rank_2 from '../../assets/svgs/rank_2-upload-emptystate.svg';
-import Rank_3 from '../../assets/svgs/rank_3-upload-emptystate.svg';
-import Rank_4 from '../../assets/svgs/rank_4-upload-emptystate.svg';
-import Rank_5 from '../../assets/svgs/rank_5-upload-emptystate.svg';
-import Rank_6 from '../../assets/svgs/rank_6-upload-emptystate.svg';
-import Rank_7 from '../../assets/svgs/rank_7-upload-emptystate.svg';
-import Rank_8 from '../../assets/svgs/rank_8-upload-emptystate.svg';
-import Rank_9 from '../../assets/svgs/rank_9-upload-emptystate.svg';
-import Rank_10 from '../../assets/svgs/rank_10-upload-emptystate.svg';
+import homeStyles from './style';
 import slides from '../../Components/NetflixImages';
 import CommonText from '../../shared/CommonText';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
@@ -27,28 +13,18 @@ import {
   faChevronLeft,
   faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
+import Svgs from '../../assets/svgs';
 
 interface Props {}
 
 export const HomeCard = (props: Props) => {
-  const [currentImage, setCurrentImage] = useState(0);
-  const animation = useRef(new Animated.Value(0));
 
-  const handlePrev = () => {
-    let newCurrentImage = currentImage - 1;
-    setCurrentImage(newCurrentImage);
-  };
-
-  const handleNext = () => {
-    let newCurrentImage = currentImage + 1;
-
-    setCurrentImage(newCurrentImage);
-  };
+  const images = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
   return (
-    <View style={globalStyles.lolomoRow_title_card}>
-      <View style={globalStyles.rowHeader_ltr}>
-        <View style={globalStyles.rowTitle_ltr0}>
+    <View style={homeStyles.lolomoRow_title_card}>
+      <View style={homeStyles.rowHeader_ltr}>
+        <View style={homeStyles.rowTitle_ltr0}>
           <CommonText
             title='Top 10 TV Shows in Nigeria Today'
             titleStyle={{}}
@@ -56,36 +32,33 @@ export const HomeCard = (props: Props) => {
         </View>
       </View>
 
-      <View style={globalStyles.rowContainer_title_card}>
-        <View style={globalStyles.ptrack_container}>
-          <View style={globalStyles.rowContent_slider}>
-            <View style={globalStyles.slider}>
-              <TouchableOpacity
-                style={globalStyles.handlePrev}
-                onPress={handlePrev}
-              >
+      <View style={homeStyles.rowContainer_title_card}>
+        <View style={homeStyles.ptrack_container}>
+          <View style={homeStyles.rowContent_slider}>
+            <View style={homeStyles.slider}>
+              <TouchableOpacity style={homeStyles.handlePrev}>
                 <View>
                   <FontAwesomeIcon
                     icon={faChevronLeft}
                     size={16}
-                    style={globalStyles.faUserIcon}
+                    style={homeStyles.faUserInfo}
                   />
                 </View>
               </TouchableOpacity>
 
-              <View style={[globalStyles.sliderMask_showPeek]}>
-                <View style={globalStyles.sliderContent}>
+              <View style={[homeStyles.sliderMask_showPeek]}>
+                <View style={homeStyles.sliderContent}>
                   <ScrollView
                     pagingEnabled
                     horizontal
                     showsHorizontalScrollIndicator={false}
                   >
                     <TouchableOpacity>
-                      <View style={globalStyles.sliderItem}>
-                        <View style={globalStyles.titleCard_Container}>
-                          <View style={globalStyles.boxArt_size}>
-                            <View style={globalStyles.rank_1_container}>
-                              <Rank_1 />
+                      <View style={homeStyles.sliderItem}>
+                        <View style={homeStyles.titleCard_Container}>
+                          <View style={homeStyles.boxArt_size}>
+                            <View style={homeStyles.rank_1_container}>
+                              <Svgs.Rank1 />
                             </View>
 
                             <Image
@@ -104,11 +77,11 @@ export const HomeCard = (props: Props) => {
                     </TouchableOpacity>
 
                     <TouchableOpacity>
-                      <View style={globalStyles.sliderItem}>
-                        <View style={globalStyles.titleCard_Container}>
-                          <View style={globalStyles.boxArt_size}>
-                            <View style={globalStyles.rank_1_container}>
-                              <Rank_2 />
+                      <View style={homeStyles.sliderItem}>
+                        <View style={homeStyles.titleCard_Container}>
+                          <View style={homeStyles.boxArt_size}>
+                            <View style={homeStyles.rank_1_container}>
+                              <Svgs.Rank2 />
                             </View>
 
                             <Image
@@ -127,11 +100,11 @@ export const HomeCard = (props: Props) => {
                     </TouchableOpacity>
 
                     <TouchableOpacity>
-                      <View style={globalStyles.sliderItem}>
-                        <View style={globalStyles.titleCard_Container}>
-                          <View style={globalStyles.boxArt_size}>
-                            <View style={globalStyles.rank_1_container}>
-                              <Rank_3 />
+                      <View style={homeStyles.sliderItem}>
+                        <View style={homeStyles.titleCard_Container}>
+                          <View style={homeStyles.boxArt_size}>
+                            <View style={homeStyles.rank_1_container}>
+                              <Svgs.Rank3 />
                             </View>
 
                             <Image
@@ -150,11 +123,11 @@ export const HomeCard = (props: Props) => {
                     </TouchableOpacity>
 
                     <TouchableOpacity>
-                      <View style={globalStyles.sliderItem}>
-                        <View style={globalStyles.titleCard_Container}>
-                          <View style={globalStyles.boxArt_size}>
-                            <View style={globalStyles.rank_1_container}>
-                              <Rank_4 />
+                      <View style={homeStyles.sliderItem}>
+                        <View style={homeStyles.titleCard_Container}>
+                          <View style={homeStyles.boxArt_size}>
+                            <View style={homeStyles.rank_1_container}>
+                              <Svgs.Rank4 />
                             </View>
 
                             <Image
@@ -173,11 +146,11 @@ export const HomeCard = (props: Props) => {
                     </TouchableOpacity>
 
                     <TouchableOpacity>
-                      <View style={globalStyles.sliderItem}>
-                        <View style={globalStyles.titleCard_Container}>
-                          <View style={globalStyles.boxArt_size}>
-                            <View style={globalStyles.rank_1_container}>
-                              <Rank_5 />
+                      <View style={homeStyles.sliderItem}>
+                        <View style={homeStyles.titleCard_Container}>
+                          <View style={homeStyles.boxArt_size}>
+                            <View style={homeStyles.rank_1_container}>
+                              <Svgs.Rank5 />
                             </View>
 
                             <Image
@@ -196,11 +169,11 @@ export const HomeCard = (props: Props) => {
                     </TouchableOpacity>
 
                     <TouchableOpacity>
-                      <View style={globalStyles.sliderItem}>
-                        <View style={globalStyles.titleCard_Container}>
-                          <View style={globalStyles.boxArt_size}>
-                            <View style={globalStyles.rank_1_container}>
-                              <Rank_6 />
+                      <View style={homeStyles.sliderItem}>
+                        <View style={homeStyles.titleCard_Container}>
+                          <View style={homeStyles.boxArt_size}>
+                            <View style={homeStyles.rank_1_container}>
+                              <Svgs.Rank6 />
                             </View>
 
                             <Image
@@ -219,11 +192,11 @@ export const HomeCard = (props: Props) => {
                     </TouchableOpacity>
 
                     <TouchableOpacity>
-                      <View style={globalStyles.sliderItem}>
-                        <View style={globalStyles.titleCard_Container}>
-                          <View style={globalStyles.boxArt_size}>
-                            <View style={globalStyles.rank_1_container}>
-                              <Rank_7 />
+                      <View style={homeStyles.sliderItem}>
+                        <View style={homeStyles.titleCard_Container}>
+                          <View style={homeStyles.boxArt_size}>
+                            <View style={homeStyles.rank_1_container}>
+                              <Svgs.Rank7 />
                             </View>
 
                             <Image
@@ -242,11 +215,11 @@ export const HomeCard = (props: Props) => {
                     </TouchableOpacity>
 
                     <TouchableOpacity>
-                      <View style={globalStyles.sliderItem}>
-                        <View style={globalStyles.titleCard_Container}>
-                          <View style={globalStyles.boxArt_size}>
-                            <View style={globalStyles.rank_1_container}>
-                              <Rank_8 />
+                      <View style={homeStyles.sliderItem}>
+                        <View style={homeStyles.titleCard_Container}>
+                          <View style={homeStyles.boxArt_size}>
+                            <View style={homeStyles.rank_1_container}>
+                              <Svgs.Rank8 />
                             </View>
 
                             <Image
@@ -265,11 +238,11 @@ export const HomeCard = (props: Props) => {
                     </TouchableOpacity>
 
                     <TouchableOpacity>
-                      <View style={globalStyles.sliderItem}>
-                        <View style={globalStyles.titleCard_Container}>
-                          <View style={globalStyles.boxArt_size}>
-                            <View style={globalStyles.rank_1_container}>
-                              <Rank_9 />
+                      <View style={homeStyles.sliderItem}>
+                        <View style={homeStyles.titleCard_Container}>
+                          <View style={homeStyles.boxArt_size}>
+                            <View style={homeStyles.rank_1_container}>
+                              <Svgs.Rank9 />
                             </View>
 
                             <Image
@@ -288,11 +261,11 @@ export const HomeCard = (props: Props) => {
                     </TouchableOpacity>
 
                     <TouchableOpacity>
-                      <View style={globalStyles.sliderItem}>
-                        <View style={globalStyles.titleCard_Container}>
-                          <View style={globalStyles.boxArt_size}>
-                            <View style={globalStyles.rank_1_container}>
-                              <Rank_10 />
+                      <View style={homeStyles.sliderItem}>
+                        <View style={homeStyles.titleCard_Container}>
+                          <View style={homeStyles.boxArt_size}>
+                            <View style={homeStyles.rank_1_container}>
+                              <Svgs.Rank10 />
                             </View>
 
                             <Image
@@ -313,15 +286,12 @@ export const HomeCard = (props: Props) => {
                 </View>
               </View>
 
-              <TouchableOpacity
-                style={globalStyles.handleNext}
-                onPress={handleNext}
-              >
+              <TouchableOpacity style={homeStyles.handleNext}>
                 <View>
                   <FontAwesomeIcon
                     icon={faChevronRight}
                     size={16}
-                    style={globalStyles.faUserIcon}
+                    style={homeStyles.faUserIcon}
                   />
                 </View>
               </TouchableOpacity>
