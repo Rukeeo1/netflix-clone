@@ -2,8 +2,7 @@ import { StyleSheet } from 'react-native';
 
 const globalStyles = StyleSheet.create({
   scrollview: {
-    backgroundColor: '#fff',
-    paddingTop: 40,
+    backgroundColor: '#000',
   },
 
   SignUpMountPoint: {
@@ -16,27 +15,6 @@ const globalStyles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     width: 375,
-  },
-
-  login_header_container: {
-    alignItems: 'flex-start',
-    justifyContent: 'center',
-    width: 375,
-    height: 45,
-  },
-
-  svg_nfLogo: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: 75,
-    height: 45,
-    marginLeft: '3%',
-  },
-
-  netflix_logo: {
-    height: 20,
-    paddingTop: 12,
-    width: 75,
   },
 
   login_body: {
@@ -145,6 +123,15 @@ const globalStyles = StyleSheet.create({
     justifyContent: 'center',
     marginTop: 24,
     marginBottom: 12,
+  },
+
+  button: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 337.5,
+    height: 50,
+    borderRadius: 4,
+    backgroundColor: '#e50914',
   },
 
   login_form_help: {

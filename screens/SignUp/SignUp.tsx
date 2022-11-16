@@ -1,14 +1,16 @@
-import React from 'react';
-import { ScrollView, Text, View } from 'react-native';
+import React, { FC } from 'react';
+import { useNavigation } from '@react-navigation/native';
+import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import globalStyles from './global';
-import NetflixSvg from '../../assets/svgs/netflix-upload-emptystate.svg';
 import { TextInput } from '@react-native-material/core';
 import NetflixBtn from '../../shared/NetflixBtn';
 import Checkbox from 'expo-checkbox';
 
 interface Props {}
 
-export const SignUp = (props: Props) => {
+export const SignUp: FC<Props> = () => {
+  const navigation: any = useNavigation();
+
   return (
     <ScrollView
       style={{ flex: 1 }}
@@ -18,11 +20,6 @@ export const SignUp = (props: Props) => {
       <View style={globalStyles.SignUpMountPoint}>
         <View style={globalStyles.loginWrapper}>
           <View></View>
-          <View style={globalStyles.login_header_container}>
-            <View style={globalStyles.svg_nfLogo}>
-              <NetflixSvg style={globalStyles.netflix_logo} />
-            </View>
-          </View>
 
           <View style={globalStyles.login_body}>
             <View style={globalStyles.login_content}>
@@ -87,7 +84,15 @@ export const SignUp = (props: Props) => {
                     </View>
 
                     <View style={globalStyles.login_button_container}>
-                      <NetflixBtn text='Sign In' />
+                      <TouchableOpacity
+                        onPress={() => {
+                          navigation.navigate('Home');
+                        }}
+                      >
+                        <View style={globalStyles.button}>
+                          <NetflixBtn text='Sign In' textStyle={{}} />
+                        </View>
+                      </TouchableOpacity>
                     </View>
 
                     <View style={globalStyles.login_form_help}>
@@ -116,9 +121,11 @@ export const SignUp = (props: Props) => {
                       New to Netflix?
                     </Text>
 
-                    <Text style={globalStyles.login_signup_content2}>
-                      Sign up now.
-                    </Text>
+                    <TouchableOpacity>
+                      <Text style={globalStyles.login_signup_content2}>
+                        Sign up now.
+                      </Text>
+                    </TouchableOpacity>
                   </View>
 
                   <View style={globalStyles.recaptcha_terms_use}>
