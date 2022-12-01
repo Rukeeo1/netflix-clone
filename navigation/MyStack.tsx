@@ -19,7 +19,7 @@ const MyStack = () => {
 
           headerStyle: {
             backgroundColor: '#000',
-            height: 80,
+            opacity: 1
           },
         }}
       />
@@ -31,7 +31,7 @@ const MyStack = () => {
 
           headerStyle: {
             backgroundColor: '#000',
-            height: 80,
+            opacity: 1
           },
         }}
       />
