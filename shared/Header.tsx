@@ -5,9 +5,9 @@ import NetflixSvg from '../assets/svgs/netflix-upload-emptystate.svg';
 import profile_logo from '../assets/images/profile_logo.png';
 import { StyleSheet, Image, Text, View } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import { DropdownMenu } from '../screens/Home/dropdown/dropdown';
-import { Notification } from '../screens/Home/Notification/Notification';
-import { Browse } from '../screens/Home/browse/browse';
+import { DropdownMenu } from "../screens/Home/dropdown/dropdown";
+import { Notification } from "../screens/Home/Notification/Notification";
+import { Browse } from "../screens/Home/browse/browse";
 
 interface Props {
   title: string;

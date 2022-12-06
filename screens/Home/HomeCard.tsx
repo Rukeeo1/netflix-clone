@@ -1,304 +1,174 @@
-import React, { useRef, useState } from 'react';
-import {
-  Image,
-  ScrollView,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import React, { FC } from 'react';
+import { Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import homeStyles from './style';
-import slides from '../../Components/NetflixImages';
-import CommonText from '../../shared/CommonText';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import {
-  faChevronLeft,
-  faChevronRight,
+  faCircleInfo,
+  faPlay,
+  faRotateRight,
 } from '@fortawesome/free-solid-svg-icons';
-import Svgs from '../../assets/svgs';
+import netflix_hero from '../../assets/images/netflix_hero_image.webp';
+import netflix_power from '../../assets/images/netflix_power.webp';
+// import { HomeCard_2 } from './HomeCard_2';
+// import { HomeCard_1 } from './HomeCard_1';
+// import { HomeCard_3 } from './HomeCard_3';
+// import { HomeCard_4 } from './HomeCard_4';
+// import { HomeCard_5 } from './HomeCard_5';
+// import { HomeCard_6 } from './HomeCard_6';
+// import { HomeCard } from './HomeCard';
+// import { HomeCard_7 } from './HomeCard_7';
+// import { HomeCard_8 } from './HomeCard_8';
+// import { HomeCard_9 } from './HomeCard_9';
+
 
 interface Props {}
 
-export const HomeCard = (props: Props) => {
-
-  const images = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
+export const HomeCard: FC<Props> = () => {
   return (
-    <View style={homeStyles.lolomoRow_title_card}>
-      <View style={homeStyles.rowHeader_ltr}>
-        <View style={homeStyles.rowTitle_ltr0}>
-          <CommonText
-            title='Top 10 TV Shows in Nigeria Today'
-            titleStyle={{}}
-          />
-        </View>
-      </View>
-
-      <View style={homeStyles.rowContainer_title_card}>
-        <View style={homeStyles.ptrack_container}>
-          <View style={homeStyles.rowContent_slider}>
-            <View style={homeStyles.slider}>
-              <TouchableOpacity style={homeStyles.handlePrev}>
+    <ScrollView
+      style={{ flex: 1 }}
+      showsVerticalScrollIndicator={false}
+      contentContainerStyle={homeStyles.scrollview}
+    >
+      <View style={homeStyles.HomeMountPoint}>
+        <View style={homeStyles.netflix_sans_loader}>
+          <View style={homeStyles.netflix_dir_ltr}>
+            <View>
+              <View style={homeStyles.netflix_dark_background}>
                 <View>
-                  <FontAwesomeIcon
-                    icon={faChevronLeft}
-                    size={16}
-                    style={homeStyles.faUserInfo}
-                  />
-                </View>
-              </TouchableOpacity>
+                  <View style={homeStyles.mainView}>
+                    <View style={homeStyles.lolomo_fullbleed}>
+                      <View style={homeStyles.volatile_billboard}>
+                        <View style={homeStyles.billboard_row}>
+                          <View style={homeStyles.billboard_billboardPane}>
+                            <Image
+                              source={netflix_hero}
+                              resizeMode="cover"
+                              style={homeStyles.hero_image_wrapper}
+                            />
 
-              <View style={[homeStyles.sliderMask_showPeek]}>
-                <View style={homeStyles.sliderContent}>
-                  <ScrollView
-                    pagingEnabled
-                    horizontal
-                    showsHorizontalScrollIndicator={false}
-                  >
-                    <TouchableOpacity>
-                      <View style={homeStyles.sliderItem}>
-                        <View style={homeStyles.titleCard_Container}>
-                          <View style={homeStyles.boxArt_size}>
-                            <View style={homeStyles.rank_1_container}>
-                              <Svgs.Rank1 />
+                            <View style={homeStyles.info_meta_layer}>
+                              <View style={homeStyles.logo_text__meta_layer}>
+                                <View style={homeStyles.billboard_title}>
+                                  <Image
+                                    source={netflix_power}
+                                    style={{
+                                      width: 100,
+                                      resizeMode: "contain",
+                                    }}
+                                  />
+                                </View>
+
+                                <View style={homeStyles.info_wrapper}>
+                                  <View
+                                    style={homeStyles.synopsis_fade_container}
+                                  >
+                                    <View
+                                      style={
+                                        homeStyles.synopsis_no_supplemental
+                                      }
+                                    >
+                                      <Text
+                                        style={homeStyles.synopsis_track_text}
+                                      >
+                                        In this absorbing crime drama, a
+                                        successful and well liked
+                                      </Text>
+                                      <Text
+                                        style={homeStyles.synopsis_track_text}
+                                      >
+                                        nightclub owner moonlights as a drug
+                                        dealer to New York City's
+                                      </Text>
+                                      <Text
+                                        style={homeStyles.synopsis_track_text}
+                                      >
+                                        A-list users
+                                      </Text>
+                                    </View>
+                                  </View>
+                                </View>
+
+                                <View style={homeStyles.billboard_links_player}>
+                                  <TouchableOpacity>
+                                    <View style={homeStyles.playButton}>
+                                      <FontAwesomeIcon
+                                        icon={faPlay}
+                                        size={12}
+                                        style={homeStyles.faUserPlay}
+                                      />
+
+                                      <Text style={homeStyles.playButtonText}>
+                                        Play
+                                      </Text>
+                                    </View>
+                                  </TouchableOpacity>
+
+                                  <TouchableOpacity>
+                                    <View style={homeStyles.moreButton}>
+                                      <FontAwesomeIcon
+                                        icon={faCircleInfo}
+                                        size={12}
+                                        style={homeStyles.faUserInfo}
+                                      />
+
+                                      <Text style={homeStyles.moreButtonText}>
+                                        More Info
+                                      </Text>
+                                    </View>
+                                  </TouchableOpacity>
+                                </View>
+                              </View>
                             </View>
 
-                            <Image
-                              source={{
-                                uri: slides[0]['image'],
-                              }}
-                              style={{
-                                width: 85.88,
-                                height: 122.66,
-                                resizeMode: 'contain',
-                              }}
-                            />
+                            <View style={homeStyles.embeded_components}>
+                              <View style={homeStyles.actionButtons}>
+                                <FontAwesomeIcon
+                                  icon={faRotateRight}
+                                  size={12.13}
+                                  style={homeStyles.faUserBell}
+                                />
+                              </View>
+
+                              <View style={homeStyles.maturity_rating}>
+                                <Text style={homeStyles.maturity_number}>
+                                  18+
+                                </Text>
+                              </View>
+                            </View>
                           </View>
                         </View>
                       </View>
-                    </TouchableOpacity>
 
-                    <TouchableOpacity>
-                      <View style={homeStyles.sliderItem}>
-                        <View style={homeStyles.titleCard_Container}>
-                          <View style={homeStyles.boxArt_size}>
-                            <View style={homeStyles.rank_1_container}>
-                              <Svgs.Rank2 />
-                            </View>
+                      {/* <HomeCard /> */}
 
-                            <Image
-                              source={{
-                                uri: slides[1]['image'],
-                              }}
-                              style={{
-                                width: 85.88,
-                                height: 122.66,
-                                resizeMode: 'contain',
-                              }}
-                            />
-                          </View>
-                        </View>
-                      </View>
-                    </TouchableOpacity>
+                      {/* <HomeCard_1 /> */}
 
-                    <TouchableOpacity>
-                      <View style={homeStyles.sliderItem}>
-                        <View style={homeStyles.titleCard_Container}>
-                          <View style={homeStyles.boxArt_size}>
-                            <View style={homeStyles.rank_1_container}>
-                              <Svgs.Rank3 />
-                            </View>
+                      {/* <HomeCard_2 /> */}
 
-                            <Image
-                              source={{
-                                uri: slides[3]['image'],
-                              }}
-                              style={{
-                                width: 85.88,
-                                height: 122.66,
-                                resizeMode: 'contain',
-                              }}
-                            />
-                          </View>
-                        </View>
-                      </View>
-                    </TouchableOpacity>
+                      {/* <HomeCard_3 /> */}
 
-                    <TouchableOpacity>
-                      <View style={homeStyles.sliderItem}>
-                        <View style={homeStyles.titleCard_Container}>
-                          <View style={homeStyles.boxArt_size}>
-                            <View style={homeStyles.rank_1_container}>
-                              <Svgs.Rank4 />
-                            </View>
+                      {/* <HomeCard_4 /> */}
 
-                            <Image
-                              source={{
-                                uri: slides[4]['image'],
-                              }}
-                              style={{
-                                width: 85.88,
-                                height: 122.66,
-                                resizeMode: 'contain',
-                              }}
-                            />
-                          </View>
-                        </View>
-                      </View>
-                    </TouchableOpacity>
+                      {/* <HomeCard_5 /> */}
 
-                    <TouchableOpacity>
-                      <View style={homeStyles.sliderItem}>
-                        <View style={homeStyles.titleCard_Container}>
-                          <View style={homeStyles.boxArt_size}>
-                            <View style={homeStyles.rank_1_container}>
-                              <Svgs.Rank5 />
-                            </View>
+                      {/* <HomeCard_6 /> */}
 
-                            <Image
-                              source={{
-                                uri: slides[5]['image'],
-                              }}
-                              style={{
-                                width: 85.88,
-                                height: 122.66,
-                                resizeMode: 'contain',
-                              }}
-                            />
-                          </View>
-                        </View>
-                      </View>
-                    </TouchableOpacity>
+                      {/* <HomeCard_7 /> */}
 
-                    <TouchableOpacity>
-                      <View style={homeStyles.sliderItem}>
-                        <View style={homeStyles.titleCard_Container}>
-                          <View style={homeStyles.boxArt_size}>
-                            <View style={homeStyles.rank_1_container}>
-                              <Svgs.Rank6 />
-                            </View>
+                      {/* <HomeCard_8 /> */}
 
-                            <Image
-                              source={{
-                                uri: slides[6]['image'],
-                              }}
-                              style={{
-                                width: 85.88,
-                                height: 122.66,
-                                resizeMode: 'contain',
-                              }}
-                            />
-                          </View>
-                        </View>
-                      </View>
-                    </TouchableOpacity>
+                      {/* <HomeCard_9 /> */}
+                    </View>
+                  </View>
 
-                    <TouchableOpacity>
-                      <View style={homeStyles.sliderItem}>
-                        <View style={homeStyles.titleCard_Container}>
-                          <View style={homeStyles.boxArt_size}>
-                            <View style={homeStyles.rank_1_container}>
-                              <Svgs.Rank7 />
-                            </View>
-
-                            <Image
-                              source={{
-                                uri: slides[7]['image'],
-                              }}
-                              style={{
-                                width: 85.88,
-                                height: 122.66,
-                                resizeMode: 'contain',
-                              }}
-                            />
-                          </View>
-                        </View>
-                      </View>
-                    </TouchableOpacity>
-
-                    <TouchableOpacity>
-                      <View style={homeStyles.sliderItem}>
-                        <View style={homeStyles.titleCard_Container}>
-                          <View style={homeStyles.boxArt_size}>
-                            <View style={homeStyles.rank_1_container}>
-                              <Svgs.Rank8 />
-                            </View>
-
-                            <Image
-                              source={{
-                                uri: slides[8]['image'],
-                              }}
-                              style={{
-                                width: 85.88,
-                                height: 122.66,
-                                resizeMode: 'contain',
-                              }}
-                            />
-                          </View>
-                        </View>
-                      </View>
-                    </TouchableOpacity>
-
-                    <TouchableOpacity>
-                      <View style={homeStyles.sliderItem}>
-                        <View style={homeStyles.titleCard_Container}>
-                          <View style={homeStyles.boxArt_size}>
-                            <View style={homeStyles.rank_1_container}>
-                              <Svgs.Rank9 />
-                            </View>
-
-                            <Image
-                              source={{
-                                uri: slides[9]['image'],
-                              }}
-                              style={{
-                                width: 85.88,
-                                height: 122.66,
-                                resizeMode: 'contain',
-                              }}
-                            />
-                          </View>
-                        </View>
-                      </View>
-                    </TouchableOpacity>
-
-                    <TouchableOpacity>
-                      <View style={homeStyles.sliderItem}>
-                        <View style={homeStyles.titleCard_Container}>
-                          <View style={homeStyles.boxArt_size}>
-                            <View style={homeStyles.rank_1_container}>
-                              <Svgs.Rank10 />
-                            </View>
-
-                            <Image
-                              source={{
-                                uri: slides[10]['image'],
-                              }}
-                              style={{
-                                width: 85.88,
-                                height: 122.66,
-                                resizeMode: 'contain',
-                              }}
-                            />
-                          </View>
-                        </View>
-                      </View>
-                    </TouchableOpacity>
-                  </ScrollView>
+                  {/* <HomeFooter /> */}
                 </View>
               </View>
-
-              <TouchableOpacity style={homeStyles.handleNext}>
-                <View>
-                  <FontAwesomeIcon
-                    icon={faChevronRight}
-                    size={16}
-                    style={homeStyles.faUserIcon}
-                  />
-                </View>
-              </TouchableOpacity>
             </View>
           </View>
         </View>
       </View>
-    </View>
+    </ScrollView>
   );
 };

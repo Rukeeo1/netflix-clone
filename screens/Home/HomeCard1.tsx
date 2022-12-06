@@ -1,40 +1,63 @@
-// import React from 'react';
-// import { Image, ScrollView, Text, TouchableOpacity, View } from 'react-native';
-// import globalStyles from './style';
+// import React, { useRef, useState } from 'react';
+// import {
+//   Image,
+//   ScrollView,
+//   TouchableOpacity,
+//   View,
+// } from 'react-native';
+// import homeStyles from './style';
 // import slides from '../../Components/NetflixImages';
 // import CommonText from '../../shared/CommonText';
+// import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
+// import {
+//   faChevronLeft,
+//   faChevronRight,
+// } from '@fortawesome/free-solid-svg-icons';
 // import Svgs from '../../assets/svgs';
 
 // interface Props {}
 
-// export const HomeCard_2 = (props: Props) => {
+// export const HomeCard = (props: Props) => {
+
+//   const images = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
 //   return (
-//     <View style={globalStyles.lolomoRow_title_card_2}>
-//       <View style={globalStyles.rowHeader_ltr}>
-//         <View style={globalStyles.rowTitle_ltr0}>
+//     <View style={homeStyles.lolomoRow_title_card}>
+//       <View style={homeStyles.rowHeader_ltr}>
+//         <View style={homeStyles.rowTitle_ltr0}>
 //           <CommonText
-//             title='Top 10 TV Movies in Nigeria Today'
+//             title='Top 10 TV Shows in Nigeria Today'
 //             titleStyle={{}}
 //           />
 //         </View>
 //       </View>
 
-//       <View style={globalStyles.rowContainer_title_card}>
-//         <View style={globalStyles.ptrack_container}>
-//           <View style={globalStyles.rowContent_slider}>
-//             <View style={globalStyles.slider}>
-//               <View style={globalStyles.sliderMask_showPeek}>
-//                 <View style={globalStyles.sliderContent}>
+//       <View style={homeStyles.rowContainer_title_card}>
+//         <View style={homeStyles.ptrack_container}>
+//           <View style={homeStyles.rowContent_slider}>
+//             <View style={homeStyles.slider}>
+//               <TouchableOpacity style={homeStyles.handlePrev}>
+//                 <View>
+//                   <FontAwesomeIcon
+//                     icon={faChevronLeft}
+//                     size={16}
+//                     style={homeStyles.faUserInfo}
+//                   />
+//                 </View>
+//               </TouchableOpacity>
+
+//               <View style={[homeStyles.sliderMask_showPeek]}>
+//                 <View style={homeStyles.sliderContent}>
 //                   <ScrollView
 //                     pagingEnabled
 //                     horizontal
 //                     showsHorizontalScrollIndicator={false}
 //                   >
 //                     <TouchableOpacity>
-//                       <View style={globalStyles.sliderItem}>
-//                         <View style={globalStyles.titleCard_Container}>
-//                           <View style={globalStyles.boxArt_size}>
-//                             <View style={globalStyles.rank_1_container}>
+//                       <View style={homeStyles.sliderItem}>
+//                         <View style={homeStyles.titleCard_Container}>
+//                           <View style={homeStyles.boxArt_size}>
+//                             <View style={homeStyles.rank_1_container}>
 //                               <Svgs.Rank1 />
 //                             </View>
 
@@ -54,10 +77,10 @@
 //                     </TouchableOpacity>
 
 //                     <TouchableOpacity>
-//                       <View style={globalStyles.sliderItem}>
-//                         <View style={globalStyles.titleCard_Container}>
-//                           <View style={globalStyles.boxArt_size}>
-//                             <View style={globalStyles.rank_1_container}>
+//                       <View style={homeStyles.sliderItem}>
+//                         <View style={homeStyles.titleCard_Container}>
+//                           <View style={homeStyles.boxArt_size}>
+//                             <View style={homeStyles.rank_1_container}>
 //                               <Svgs.Rank2 />
 //                             </View>
 
@@ -77,10 +100,10 @@
 //                     </TouchableOpacity>
 
 //                     <TouchableOpacity>
-//                       <View style={globalStyles.sliderItem}>
-//                         <View style={globalStyles.titleCard_Container}>
-//                           <View style={globalStyles.boxArt_size}>
-//                             <View style={globalStyles.rank_1_container}>
+//                       <View style={homeStyles.sliderItem}>
+//                         <View style={homeStyles.titleCard_Container}>
+//                           <View style={homeStyles.boxArt_size}>
+//                             <View style={homeStyles.rank_1_container}>
 //                               <Svgs.Rank3 />
 //                             </View>
 
@@ -100,10 +123,10 @@
 //                     </TouchableOpacity>
 
 //                     <TouchableOpacity>
-//                       <View style={globalStyles.sliderItem}>
-//                         <View style={globalStyles.titleCard_Container}>
-//                           <View style={globalStyles.boxArt_size}>
-//                             <View style={globalStyles.rank_1_container}>
+//                       <View style={homeStyles.sliderItem}>
+//                         <View style={homeStyles.titleCard_Container}>
+//                           <View style={homeStyles.boxArt_size}>
+//                             <View style={homeStyles.rank_1_container}>
 //                               <Svgs.Rank4 />
 //                             </View>
 
@@ -123,10 +146,10 @@
 //                     </TouchableOpacity>
 
 //                     <TouchableOpacity>
-//                       <View style={globalStyles.sliderItem}>
-//                         <View style={globalStyles.titleCard_Container}>
-//                           <View style={globalStyles.boxArt_size}>
-//                             <View style={globalStyles.rank_1_container}>
+//                       <View style={homeStyles.sliderItem}>
+//                         <View style={homeStyles.titleCard_Container}>
+//                           <View style={homeStyles.boxArt_size}>
+//                             <View style={homeStyles.rank_1_container}>
 //                               <Svgs.Rank5 />
 //                             </View>
 
@@ -146,10 +169,10 @@
 //                     </TouchableOpacity>
 
 //                     <TouchableOpacity>
-//                       <View style={globalStyles.sliderItem}>
-//                         <View style={globalStyles.titleCard_Container}>
-//                           <View style={globalStyles.boxArt_size}>
-//                             <View style={globalStyles.rank_1_container}>
+//                       <View style={homeStyles.sliderItem}>
+//                         <View style={homeStyles.titleCard_Container}>
+//                           <View style={homeStyles.boxArt_size}>
+//                             <View style={homeStyles.rank_1_container}>
 //                               <Svgs.Rank6 />
 //                             </View>
 
@@ -169,10 +192,10 @@
 //                     </TouchableOpacity>
 
 //                     <TouchableOpacity>
-//                       <View style={globalStyles.sliderItem}>
-//                         <View style={globalStyles.titleCard_Container}>
-//                           <View style={globalStyles.boxArt_size}>
-//                             <View style={globalStyles.rank_1_container}>
+//                       <View style={homeStyles.sliderItem}>
+//                         <View style={homeStyles.titleCard_Container}>
+//                           <View style={homeStyles.boxArt_size}>
+//                             <View style={homeStyles.rank_1_container}>
 //                               <Svgs.Rank7 />
 //                             </View>
 
@@ -192,10 +215,10 @@
 //                     </TouchableOpacity>
 
 //                     <TouchableOpacity>
-//                       <View style={globalStyles.sliderItem}>
-//                         <View style={globalStyles.titleCard_Container}>
-//                           <View style={globalStyles.boxArt_size}>
-//                             <View style={globalStyles.rank_1_container}>
+//                       <View style={homeStyles.sliderItem}>
+//                         <View style={homeStyles.titleCard_Container}>
+//                           <View style={homeStyles.boxArt_size}>
+//                             <View style={homeStyles.rank_1_container}>
 //                               <Svgs.Rank8 />
 //                             </View>
 
@@ -215,10 +238,10 @@
 //                     </TouchableOpacity>
 
 //                     <TouchableOpacity>
-//                       <View style={globalStyles.sliderItem}>
-//                         <View style={globalStyles.titleCard_Container}>
-//                           <View style={globalStyles.boxArt_size}>
-//                             <View style={globalStyles.rank_1_container}>
+//                       <View style={homeStyles.sliderItem}>
+//                         <View style={homeStyles.titleCard_Container}>
+//                           <View style={homeStyles.boxArt_size}>
+//                             <View style={homeStyles.rank_1_container}>
 //                               <Svgs.Rank9 />
 //                             </View>
 
@@ -238,10 +261,10 @@
 //                     </TouchableOpacity>
 
 //                     <TouchableOpacity>
-//                       <View style={globalStyles.sliderItem}>
-//                         <View style={globalStyles.titleCard_Container}>
-//                           <View style={globalStyles.boxArt_size}>
-//                             <View style={globalStyles.rank_1_container}>
+//                       <View style={homeStyles.sliderItem}>
+//                         <View style={homeStyles.titleCard_Container}>
+//                           <View style={homeStyles.boxArt_size}>
+//                             <View style={homeStyles.rank_1_container}>
 //                               <Svgs.Rank10 />
 //                             </View>
 
@@ -262,6 +285,16 @@
 //                   </ScrollView>
 //                 </View>
 //               </View>
+
+//               <TouchableOpacity style={homeStyles.handleNext}>
+//                 <View>
+//                   <FontAwesomeIcon
+//                     icon={faChevronRight}
+//                     size={16}
+//                     style={homeStyles.faUserIcon}
+//                   />
+//                 </View>
+//               </TouchableOpacity>
 //             </View>
 //           </View>
 //         </View>
