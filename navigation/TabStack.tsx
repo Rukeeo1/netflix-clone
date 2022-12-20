@@ -1,12 +1,12 @@
 import Reaact from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Home } from "../screens/Home/HomeCard";
-import Header from "../shared/Header";
+import { HomeCard } from "../screens/Home/HomeCard";
 import { Image, Text, View } from "react-native";
-import Games from "../screens/Games/Games";
-import NewHot from "../screens/New&Hot/NewHot";
-import FastLaughs from "../screens/FastLaughs/FastLaughs";
-import Downloads from "../screens/Downloads/Downloads";
+import Header from "../shared/Header";
+// import Games from "../screens/Games/Games";
+// import NewHot from "../screens/New&Hot/NewHot";
+// import FastLaughs from "../screens/FastLaughs/FastLaughs";
+// import Downloads from "../screens/Downloads/Downloads";
 
 const Tab = createBottomTabNavigator();
 
@@ -35,16 +35,11 @@ const TabNavigator = () => {
       })}
     >
       <Tab.Screen
-        name="Home"
-        component={Home}
+        name="HomeCard"
+        component={HomeCard}
         options={{
-          headerLeft: () => null,
-          headerTitle: () => <Header title={""} />,
-          headerStyle: {
-            backgroundColor: "#000",
-            opacity: 1,
-          },
-
+          // headerShown: false,
+          headerTitle: () => <Header title={''} />,
           tabBarIcon: ({ focused }) => (
             <View style={{ alignItems: "center", justifyContent: "center" }}>
               <Image
@@ -61,7 +56,7 @@ const TabNavigator = () => {
         }}
       />
 
-      <Tab.Screen
+      {/* <Tab.Screen
         name="Games"
         component={Games}
         options={{
@@ -138,9 +133,10 @@ const TabNavigator = () => {
             </View>
           ),
         }}
-      />
+      /> */}
     </Tab.Navigator>
   );
 };
 
 export default TabNavigator;
+
