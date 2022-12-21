@@ -16,10 +16,12 @@ const MyStack = () => {
         options={{
           headerLeft: () => null,
           headerTitle: () => <Header title={""} />,
-
+          // headerShown: true,
+          //headerTransparent: true,
+          headerShadowVisible: false,
           headerStyle: {
+            // backgroundColor: "#ABA2A2",
             backgroundColor: "#000",
-            height: 80,
           },
         }}
       />
