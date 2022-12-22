@@ -20,6 +20,7 @@ import mainPoster from "../../assets/images/MainPoster.png";
 import plus from "../../assets/images/plus.png";
 import mainPlayButton from "../../assets/images/MainPLayButton.png";
 import infoIcon from "../../assets/images/info.png";
+import CommonText from "../../shared/CommonText";
 
 interface Props {}
 
@@ -33,11 +34,21 @@ export const HomeCard: FC<Props> = () => {
       <View style={homeStyles.HomeCardContainer}>
         <View style={homeStyles.HomeCardNavBarContainer}>
           <View style={homeStyles.HomeCardNavBarContent}>
-            <Text style={homeStyles.HomeCardNavText}>TV Shows</Text>
-            <Text style={homeStyles.HomeCardNavText}>Movies</Text>
+            <CommonText
+              title="TV Shows"
+              titleStyle={homeStyles.HomeCardNavText}
+            />
+            <CommonText
+              title="Movies"
+              titleStyle={homeStyles.HomeCardNavText}
+            />
 
             <View style={homeStyles.categoryContainer}>
-              <Text style={homeStyles.CategoryText}>Categories</Text>
+              <CommonText
+                title="Categories"
+                titleStyle={homeStyles.CategoryText}
+              />
+
               <Image source={caretDownIcon} style={homeStyles.caretDownIcon} />
             </View>
           </View>
@@ -56,7 +67,10 @@ export const HomeCard: FC<Props> = () => {
                   resizeMode="contain"
                   style={homeStyles.plus}
                 />
-                <Text style={homeStyles.myListText}>My List</Text>
+                <CommonText
+                  title="My List"
+                  titleStyle={homeStyles.myListText}
+                />
               </View>
 
               <Image
@@ -71,7 +85,7 @@ export const HomeCard: FC<Props> = () => {
                   resizeMode="contain"
                   style={homeStyles.infoIcon}
                 />
-                <Text style={homeStyles.infoText}>Info</Text>
+                <CommonText title="Info" titleStyle={homeStyles.infoText} />
               </View>
             </View>
           </ImageBackground>
