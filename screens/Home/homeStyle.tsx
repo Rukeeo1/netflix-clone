@@ -27,30 +27,31 @@ const homeStyles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     position: "relative",
-    color: "#e5e5e5",
-    width: 339.11,
+    color: "#FFFFFF",
+    width: "92%",
+    maxWidth: 370,
     paddingHorizontal: 22,
   },
 
   HomeCardNavText: {
     fontStyle: "normal",
-    fontSize: 16,
+    fontSize: 14,
     lineHeight: 26,
-    color: "#e5e5e5",
+    color: "#FFFFFF",
   },
 
   categoryContainer: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "flex-start",
-    color: "#e5e5e5",
+    color: "#FFFFFF",
   },
 
   CategoryText: {
     fontStyle: "normal",
-    fontSize: 16,
+    fontSize: 14,
     lineHeight: 26,
-    color: "#e5e5e5",
+    color: "#FFFFFF",
   },
 
   caretDownIcon: {
@@ -64,7 +65,7 @@ const homeStyles = StyleSheet.create({
     justifyContent: "center",
     position: "relative",
     width: "100%",
-    height: 603.99,
+    height: 538,
   },
 
   mainPoster: {
@@ -72,24 +73,36 @@ const homeStyles = StyleSheet.create({
     justifyContent: "center",
     position: "relative",
     width: "100%",
-    // height: 762.6290893554688,
-    height: 603.99,
+    maxWidth: 375,
+    height: 538,
   },
 
   mainPosterActions: {
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "space-between",
-    width: 330,
-    height: 54.38,
+    justifyContent: "center",
+    width: "100%",
+    height: 41,
     position: "absolute",
-    top: 529.4,
+    top: 468,
+  },
+
+  mainPosterActionContents: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    width: 291,
   },
 
   myListContainer: {
     alignItems: "center",
     justifyContent: "center",
     width: 51,
+  },
+
+  myListContent: {
+    alignItems: "center",
+    justifyContent: "center",
   },
 
   plus: {
@@ -102,19 +115,22 @@ const homeStyles = StyleSheet.create({
     lineHeight: 18,
     letterSpacing: 0,
     textAlign: "center",
-    color: "#e5e5e5",
+    color: "#FFFFFF",
   },
 
   mainPlayButton: {
-    width: 119.34,
-    height: 46.57,
+    width: 100,
   },
 
   infoContainer: {
     alignItems: "center",
     justifyContent: "center",
-    width: 29.11,
-    height: 54.38,
+    width: 51,
+  },
+
+  infoContent: {
+    alignItems: "center",
+    justifyContent: "center",
   },
 
   infoIcon: {
@@ -126,7 +142,7 @@ const homeStyles = StyleSheet.create({
     fontSize: 11.55,
     lineHeight: 17.61,
     textAlign: "center",
-    color: "#e5e5e5",
+    color: "#FFFFFF",
   },
 
   /** TrendingNowContainer **/

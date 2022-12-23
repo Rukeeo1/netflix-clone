@@ -18,7 +18,7 @@ import {
 import caretDownIcon from "../../assets/images/caretDownIcon.png";
 import mainPoster from "../../assets/images/MainPoster.png";
 import plus from "../../assets/images/plus.png";
-import mainPlayButton from "../../assets/images/MainPLayButton.png";
+import mainPlayButton from "../../assets/images/home-card-button-play.png";
 import infoIcon from "../../assets/images/info.png";
 import CommonText from "../../shared/CommonText";
 
@@ -57,35 +57,50 @@ export const HomeCard: FC<Props> = () => {
         <View style={homeStyles.HomeCardContent}>
           <ImageBackground
             source={mainPoster}
-            resizeMode="stretch"
+            resizeMode="contain"
             style={homeStyles.mainPoster}
           >
             <View style={homeStyles.mainPosterActions}>
-              <View style={homeStyles.myListContainer}>
-                <Image
-                  source={plus}
-                  resizeMode="contain"
-                  style={homeStyles.plus}
-                />
-                <CommonText
-                  title="My List"
-                  titleStyle={homeStyles.myListText}
-                />
-              </View>
+              <View style={homeStyles.mainPosterActionContents}>
+                <View style={homeStyles.myListContainer}>
+                  <TouchableOpacity>
+                    <View style={homeStyles.myListContent}>
+                      <Image
+                        source={plus}
+                        resizeMode="contain"
+                        style={homeStyles.plus}
+                      />
+                      <CommonText
+                        title="My List"
+                        titleStyle={homeStyles.myListText}
+                      />
+                    </View>
+                  </TouchableOpacity>
+                </View>
 
-              <Image
-                source={mainPlayButton}
-                resizeMode="contain"
-                style={homeStyles.mainPlayButton}
-              />
+                <TouchableOpacity>
+                  <Image
+                    source={mainPlayButton}
+                    resizeMode="contain"
+                    style={homeStyles.mainPlayButton}
+                  />
+                </TouchableOpacity>
 
-              <View style={homeStyles.infoContainer}>
-                <Image
-                  source={infoIcon}
-                  resizeMode="contain"
-                  style={homeStyles.infoIcon}
-                />
-                <CommonText title="Info" titleStyle={homeStyles.infoText} />
+                <View style={homeStyles.infoContainer}>
+                  <TouchableOpacity>
+                    <View style={homeStyles.infoContent}>
+                      <Image
+                        source={infoIcon}
+                        resizeMode="contain"
+                        style={homeStyles.infoIcon}
+                      />
+                      <CommonText
+                        title="Info"
+                        titleStyle={homeStyles.infoText}
+                      />
+                    </View>
+                  </TouchableOpacity>
+                </View>
               </View>
             </View>
           </ImageBackground>
