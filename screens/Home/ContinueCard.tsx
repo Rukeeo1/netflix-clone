@@ -7,7 +7,7 @@ import homeStyles from "./homeStyle";
 interface Props {}
 
 export const ContinueCard: FC<Props> = () => {
-  const continueMovieCards = movieCards.slice(0, 18);
+  const continueMovieCards = movieCards.slice(18, 36);
 
   console.log(continueMovieCards);
 
