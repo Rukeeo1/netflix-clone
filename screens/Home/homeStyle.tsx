@@ -145,10 +145,62 @@ const homeStyles = StyleSheet.create({
     color: "#FFFFFF",
   },
 
-  /** TrendingNowContainer **/
-  trendingNowContainer: {
+  /** topPicksContainer **/
+  topPicksContainer: {
     alignItems: "center",
     justifyContent: "center",
+    width: "100%",
+    maxWidth: 367,
+    padding: 0,
+    // marginTop: 57.6,
+    marginBottom: 19.2,
+  },
+
+  topTextContainer: {
+    alignItems: "flex-start",
+    justifyContent: "center",
+    width: "100%",
+  },
+
+  topText: {
+    fontSize: 18,
+    lineHeight: 20,
+    letterSpacing: -0.25,
+    textAlign: "left",
+    color: "#E6E6E6",
+  },
+
+  movieCardContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    width: "100%",
+  },
+
+  movieCardItems: {
+    alignItems: "center",
+    justifyContent: "center",
+    margin: 4,
+    borderRadius: 14,
+    height: "auto",
+  },
+
+  movieCard: {
+    width: 106,
+    // height: 188,
+    height: 160,
+    borderRadius: 4,
+  },
+
+  /*ContinueCard*/
+  continueCardContainer: {
+    alignItems: "center",
+    justifyContent: "center",
+    width: "100%",
+    maxWidth: 367,
+    padding: 0,
+    // marginTop: 57.6,
+    marginBottom: 19.2,
   },
 });
 

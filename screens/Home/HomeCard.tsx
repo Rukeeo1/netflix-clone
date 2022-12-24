@@ -8,19 +8,14 @@ import {
   View,
 } from "react-native";
 import homeStyles from "./homeStyle";
-import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
-import {
-  faChevronDown,
-  faCircleInfo,
-  faPlay,
-  faRotateRight,
-} from "@fortawesome/free-solid-svg-icons";
 import caretDownIcon from "../../assets/images/caretDownIcon.png";
 import mainPoster from "../../assets/images/MainPoster.png";
 import plus from "../../assets/images/plus.png";
 import mainPlayButton from "../../assets/images/home-card-button-play.png";
 import infoIcon from "../../assets/images/info.png";
 import CommonText from "../../shared/CommonText";
+import { TopPicksCard } from "./TopPicksCard";
+import { ContinueCard } from "./ContinueCard";
 
 interface Props {}
 
@@ -105,6 +100,9 @@ export const HomeCard: FC<Props> = () => {
             </View>
           </ImageBackground>
         </View>
+
+        <TopPicksCard />
+        <ContinueCard />
       </View>
     </ScrollView>
   );
