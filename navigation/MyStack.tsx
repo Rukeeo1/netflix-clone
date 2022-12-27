@@ -20,8 +20,10 @@ const MyStack = () => {
           //headerTransparent: true,
           headerShadowVisible: false,
           headerStyle: {
-            // backgroundColor: "#ABA2A2",
-            backgroundColor: "#000",
+
+            backgroundColor: '#000',
+            opacity: 1
+
           },
         }}
       />
@@ -32,8 +34,8 @@ const MyStack = () => {
           headerTitle: () => <SignUpHeader />,
 
           headerStyle: {
-            backgroundColor: "#000",
-            height: 80,
+            backgroundColor: '#000',
+            opacity: 1
           },
         }}
       />
