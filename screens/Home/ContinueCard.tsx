@@ -9,8 +9,6 @@ interface Props {}
 export const ContinueCard: FC<Props> = () => {
   const continueMovieCards = movieCards.slice(18, 36);
 
-  console.log(continueMovieCards);
-
   return (
     <View style={homeStyles.continueCardContainer}>
       <View style={homeStyles.topTextContainer}>

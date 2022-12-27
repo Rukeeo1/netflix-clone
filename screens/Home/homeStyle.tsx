@@ -7,14 +7,14 @@ const homeStyles = StyleSheet.create({
     backgroundColor: "#000",
   },
 
-  HomeCardContainer: {
+  homeCardContainer: {
     alignItems: "center",
     justifyContent: "center",
     position: "relative",
     width: "100%",
   },
 
-  HomeCardNavBarContainer: {
+  homeCardNavBarContainer: {
     alignItems: "center",
     justifyContent: "center",
     position: "relative",
@@ -22,7 +22,7 @@ const homeStyles = StyleSheet.create({
     backgroundColor: "#000000",
   },
 
-  HomeCardNavBarContent: {
+  homeCardNavBarContent: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
@@ -33,7 +33,7 @@ const homeStyles = StyleSheet.create({
     paddingHorizontal: 22,
   },
 
-  HomeCardNavText: {
+  homeCardNavText: {
     fontStyle: "normal",
     fontSize: 14,
     lineHeight: 26,
@@ -47,7 +47,7 @@ const homeStyles = StyleSheet.create({
     color: "#FFFFFF",
   },
 
-  CategoryText: {
+  categoryText: {
     fontStyle: "normal",
     fontSize: 14,
     lineHeight: 26,
@@ -60,7 +60,7 @@ const homeStyles = StyleSheet.create({
     resizeMode: "contain",
   },
 
-  HomeCardContent: {
+  homeCardContent: {
     alignItems: "center",
     justifyContent: "center",
     position: "relative",

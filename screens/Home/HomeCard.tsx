@@ -26,22 +26,22 @@ export const HomeCard: FC<Props> = () => {
       showsVerticalScrollIndicator={false}
       contentContainerStyle={homeStyles.scrollview}
     >
-      <View style={homeStyles.HomeCardContainer}>
-        <View style={homeStyles.HomeCardNavBarContainer}>
-          <View style={homeStyles.HomeCardNavBarContent}>
+      <View style={homeStyles.homeCardContainer}>
+        <View style={homeStyles.homeCardNavBarContainer}>
+          <View style={homeStyles.homeCardNavBarContent}>
             <CommonText
               title="TV Shows"
-              titleStyle={homeStyles.HomeCardNavText}
+              titleStyle={homeStyles.homeCardNavText}
             />
             <CommonText
               title="Movies"
-              titleStyle={homeStyles.HomeCardNavText}
+              titleStyle={homeStyles.homeCardNavText}
             />
 
             <View style={homeStyles.categoryContainer}>
               <CommonText
                 title="Categories"
-                titleStyle={homeStyles.CategoryText}
+                titleStyle={homeStyles.categoryText}
               />
 
               <Image source={caretDownIcon} style={homeStyles.caretDownIcon} />
@@ -49,7 +49,7 @@ export const HomeCard: FC<Props> = () => {
           </View>
         </View>
 
-        <View style={homeStyles.HomeCardContent}>
+        <View style={homeStyles.homeCardContent}>
           <ImageBackground
             source={mainPoster}
             resizeMode="contain"
