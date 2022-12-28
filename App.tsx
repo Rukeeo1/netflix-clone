@@ -1,7 +1,7 @@
 import 'react-native-gesture-handler';
 import React, { FC, useState } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { Home } from './screens/Home/Home';
+import { HomeCard } from "./screens/Home/HomeCard";
 import { SignUp } from './screens/SignUp/SignUp';
 import MyStack from './navigation/MyStack';
 import TabNavigator from './navigation/TabStack';

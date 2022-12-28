@@ -1,5 +1,5 @@
-import React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import React from "react";
+import { StyleSheet, View, Text } from "react-native";
 
 interface Props {
   title: string;
@@ -9,7 +9,7 @@ interface Props {
 const CommonText = (props: Props) => {
   return (
     <View>
-      <Text style={[styles.row_header_title, props.titleStyle]}>
+      <Text style={[styles.rowHeaderTitle, props.titleStyle]}>
         {props.title}
       </Text>
     </View>
@@ -17,9 +17,8 @@ const CommonText = (props: Props) => {
 };
 
 const styles = StyleSheet.create({
-  row_header_title: {
-    fontSize: 12,
-    color: '#e5e5e5',
+  rowHeaderTitle: {
+    color: "#e5e5e5",
   },
 });
 

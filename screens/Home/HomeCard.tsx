@@ -1,334 +1,109 @@
-import React, { useRef, useState } from 'react';
+import React, { FC } from "react";
 import {
-  Animated,
-  Dimensions,
-  FlatList,
   Image,
+  ImageBackground,
   ScrollView,
   Text,
   TouchableOpacity,
   View,
-} from 'react-native';
-import globalStyles from './global';
-import Rank_1 from '../../assets/svgs/rank_1-upload-emptystate.svg';
-import Rank_2 from '../../assets/svgs/rank_2-upload-emptystate.svg';
-import Rank_3 from '../../assets/svgs/rank_3-upload-emptystate.svg';
-import Rank_4 from '../../assets/svgs/rank_4-upload-emptystate.svg';
-import Rank_5 from '../../assets/svgs/rank_5-upload-emptystate.svg';
-import Rank_6 from '../../assets/svgs/rank_6-upload-emptystate.svg';
-import Rank_7 from '../../assets/svgs/rank_7-upload-emptystate.svg';
-import Rank_8 from '../../assets/svgs/rank_8-upload-emptystate.svg';
-import Rank_9 from '../../assets/svgs/rank_9-upload-emptystate.svg';
-import Rank_10 from '../../assets/svgs/rank_10-upload-emptystate.svg';
-import slides from '../../Components/NetflixImages';
-import CommonText from '../../shared/CommonText';
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import {
-  faChevronLeft,
-  faChevronRight,
-} from '@fortawesome/free-solid-svg-icons';
+} from "react-native";
+import homeStyles from "./homeStyle";
+import caretDownIcon from "../../assets/images/caretDownIcon.png";
+import mainPoster from "../../assets/images/MainPoster.png";
+import plus from "../../assets/images/plus.png";
+import mainPlayButton from "../../assets/images/home-card-button-play.png";
+import infoIcon from "../../assets/images/info.png";
+import CommonText from "../../shared/CommonText";
+import { TopPicksCard } from "./TopPicksCard";
+import { ContinueCard } from "./ContinueCard";
 
 interface Props {}
 
-export const HomeCard = (props: Props) => {
-  const [currentImage, setCurrentImage] = useState(0);
-  const animation = useRef(new Animated.Value(0));
-
-  const handlePrev = () => {
-    let newCurrentImage = currentImage - 1;
-    setCurrentImage(newCurrentImage);
-  };
-
-  const handleNext = () => {
-    let newCurrentImage = currentImage + 1;
-
-    setCurrentImage(newCurrentImage);
-  };
-
+export const HomeCard: FC<Props> = () => {
   return (
-    <View style={globalStyles.lolomoRow_title_card}>
-      <View style={globalStyles.rowHeader_ltr}>
-        <View style={globalStyles.rowTitle_ltr0}>
-          <CommonText
-            title='Top 10 TV Shows in Nigeria Today'
-            titleStyle={{}}
-          />
-        </View>
-      </View>
+    <ScrollView
+      style={{ flex: 1 }}
+      showsVerticalScrollIndicator={false}
+      contentContainerStyle={homeStyles.scrollview}
+    >
+      <View style={homeStyles.homeCardContainer}>
+        <View style={homeStyles.homeCardNavBarContainer}>
+          <View style={homeStyles.homeCardNavBarContent}>
+            <CommonText
+              title="TV Shows"
+              titleStyle={homeStyles.homeCardNavText}
+            />
+            <CommonText
+              title="Movies"
+              titleStyle={homeStyles.homeCardNavText}
+            />
 
-      <View style={globalStyles.rowContainer_title_card}>
-        <View style={globalStyles.ptrack_container}>
-          <View style={globalStyles.rowContent_slider}>
-            <View style={globalStyles.slider}>
-              <TouchableOpacity
-                style={globalStyles.handlePrev}
-                onPress={handlePrev}
-              >
-                <View>
-                  <FontAwesomeIcon
-                    icon={faChevronLeft}
-                    size={16}
-                    style={globalStyles.faUserIcon}
-                  />
-                </View>
-              </TouchableOpacity>
+            <View style={homeStyles.categoryContainer}>
+              <CommonText
+                title="Categories"
+                titleStyle={homeStyles.categoryText}
+              />
 
-              <View style={[globalStyles.sliderMask_showPeek]}>
-                <View style={globalStyles.sliderContent}>
-                  <ScrollView
-                    pagingEnabled
-                    horizontal
-                    showsHorizontalScrollIndicator={false}
-                  >
-                    <TouchableOpacity>
-                      <View style={globalStyles.sliderItem}>
-                        <View style={globalStyles.titleCard_Container}>
-                          <View style={globalStyles.boxArt_size}>
-                            <View style={globalStyles.rank_1_container}>
-                              <Rank_1 />
-                            </View>
-
-                            <Image
-                              source={{
-                                uri: slides[0]['image'],
-                              }}
-                              style={{
-                                width: 85.88,
-                                height: 122.66,
-                                resizeMode: 'contain',
-                              }}
-                            />
-                          </View>
-                        </View>
-                      </View>
-                    </TouchableOpacity>
-
-                    <TouchableOpacity>
-                      <View style={globalStyles.sliderItem}>
-                        <View style={globalStyles.titleCard_Container}>
-                          <View style={globalStyles.boxArt_size}>
-                            <View style={globalStyles.rank_1_container}>
-                              <Rank_2 />
-                            </View>
-
-                            <Image
-                              source={{
-                                uri: slides[1]['image'],
-                              }}
-                              style={{
-                                width: 85.88,
-                                height: 122.66,
-                                resizeMode: 'contain',
-                              }}
-                            />
-                          </View>
-                        </View>
-                      </View>
-                    </TouchableOpacity>
-
-                    <TouchableOpacity>
-                      <View style={globalStyles.sliderItem}>
-                        <View style={globalStyles.titleCard_Container}>
-                          <View style={globalStyles.boxArt_size}>
-                            <View style={globalStyles.rank_1_container}>
-                              <Rank_3 />
-                            </View>
-
-                            <Image
-                              source={{
-                                uri: slides[3]['image'],
-                              }}
-                              style={{
-                                width: 85.88,
-                                height: 122.66,
-                                resizeMode: 'contain',
-                              }}
-                            />
-                          </View>
-                        </View>
-                      </View>
-                    </TouchableOpacity>
-
-                    <TouchableOpacity>
-                      <View style={globalStyles.sliderItem}>
-                        <View style={globalStyles.titleCard_Container}>
-                          <View style={globalStyles.boxArt_size}>
-                            <View style={globalStyles.rank_1_container}>
-                              <Rank_4 />
-                            </View>
-
-                            <Image
-                              source={{
-                                uri: slides[4]['image'],
-                              }}
-                              style={{
-                                width: 85.88,
-                                height: 122.66,
-                                resizeMode: 'contain',
-                              }}
-                            />
-                          </View>
-                        </View>
-                      </View>
-                    </TouchableOpacity>
-
-                    <TouchableOpacity>
-                      <View style={globalStyles.sliderItem}>
-                        <View style={globalStyles.titleCard_Container}>
-                          <View style={globalStyles.boxArt_size}>
-                            <View style={globalStyles.rank_1_container}>
-                              <Rank_5 />
-                            </View>
-
-                            <Image
-                              source={{
-                                uri: slides[5]['image'],
-                              }}
-                              style={{
-                                width: 85.88,
-                                height: 122.66,
-                                resizeMode: 'contain',
-                              }}
-                            />
-                          </View>
-                        </View>
-                      </View>
-                    </TouchableOpacity>
-
-                    <TouchableOpacity>
-                      <View style={globalStyles.sliderItem}>
-                        <View style={globalStyles.titleCard_Container}>
-                          <View style={globalStyles.boxArt_size}>
-                            <View style={globalStyles.rank_1_container}>
-                              <Rank_6 />
-                            </View>
-
-                            <Image
-                              source={{
-                                uri: slides[6]['image'],
-                              }}
-                              style={{
-                                width: 85.88,
-                                height: 122.66,
-                                resizeMode: 'contain',
-                              }}
-                            />
-                          </View>
-                        </View>
-                      </View>
-                    </TouchableOpacity>
-
-                    <TouchableOpacity>
-                      <View style={globalStyles.sliderItem}>
-                        <View style={globalStyles.titleCard_Container}>
-                          <View style={globalStyles.boxArt_size}>
-                            <View style={globalStyles.rank_1_container}>
-                              <Rank_7 />
-                            </View>
-
-                            <Image
-                              source={{
-                                uri: slides[7]['image'],
-                              }}
-                              style={{
-                                width: 85.88,
-                                height: 122.66,
-                                resizeMode: 'contain',
-                              }}
-                            />
-                          </View>
-                        </View>
-                      </View>
-                    </TouchableOpacity>
-
-                    <TouchableOpacity>
-                      <View style={globalStyles.sliderItem}>
-                        <View style={globalStyles.titleCard_Container}>
-                          <View style={globalStyles.boxArt_size}>
-                            <View style={globalStyles.rank_1_container}>
-                              <Rank_8 />
-                            </View>
-
-                            <Image
-                              source={{
-                                uri: slides[8]['image'],
-                              }}
-                              style={{
-                                width: 85.88,
-                                height: 122.66,
-                                resizeMode: 'contain',
-                              }}
-                            />
-                          </View>
-                        </View>
-                      </View>
-                    </TouchableOpacity>
-
-                    <TouchableOpacity>
-                      <View style={globalStyles.sliderItem}>
-                        <View style={globalStyles.titleCard_Container}>
-                          <View style={globalStyles.boxArt_size}>
-                            <View style={globalStyles.rank_1_container}>
-                              <Rank_9 />
-                            </View>
-
-                            <Image
-                              source={{
-                                uri: slides[9]['image'],
-                              }}
-                              style={{
-                                width: 85.88,
-                                height: 122.66,
-                                resizeMode: 'contain',
-                              }}
-                            />
-                          </View>
-                        </View>
-                      </View>
-                    </TouchableOpacity>
-
-                    <TouchableOpacity>
-                      <View style={globalStyles.sliderItem}>
-                        <View style={globalStyles.titleCard_Container}>
-                          <View style={globalStyles.boxArt_size}>
-                            <View style={globalStyles.rank_1_container}>
-                              <Rank_10 />
-                            </View>
-
-                            <Image
-                              source={{
-                                uri: slides[10]['image'],
-                              }}
-                              style={{
-                                width: 85.88,
-                                height: 122.66,
-                                resizeMode: 'contain',
-                              }}
-                            />
-                          </View>
-                        </View>
-                      </View>
-                    </TouchableOpacity>
-                  </ScrollView>
-                </View>
-              </View>
-
-              <TouchableOpacity
-                style={globalStyles.handleNext}
-                onPress={handleNext}
-              >
-                <View>
-                  <FontAwesomeIcon
-                    icon={faChevronRight}
-                    size={16}
-                    style={globalStyles.faUserIcon}
-                  />
-                </View>
-              </TouchableOpacity>
+              <Image source={caretDownIcon} style={homeStyles.caretDownIcon} />
             </View>
           </View>
         </View>
+
+        <View style={homeStyles.homeCardContent}>
+          <ImageBackground
+            source={mainPoster}
+            resizeMode="contain"
+            style={homeStyles.mainPoster}
+          >
+            <View style={homeStyles.mainPosterActions}>
+              <View style={homeStyles.mainPosterActionContents}>
+                <View style={homeStyles.myListContainer}>
+                  <TouchableOpacity>
+                    <View style={homeStyles.myListContent}>
+                      <Image
+                        source={plus}
+                        resizeMode="contain"
+                        style={homeStyles.plus}
+                      />
+                      <CommonText
+                        title="My List"
+                        titleStyle={homeStyles.myListText}
+                      />
+                    </View>
+                  </TouchableOpacity>
+                </View>
+
+                <TouchableOpacity>
+                  <Image
+                    source={mainPlayButton}
+                    resizeMode="contain"
+                    style={homeStyles.mainPlayButton}
+                  />
+                </TouchableOpacity>
+
+                <View style={homeStyles.infoContainer}>
+                  <TouchableOpacity>
+                    <View style={homeStyles.infoContent}>
+                      <Image
+                        source={infoIcon}
+                        resizeMode="contain"
+                        style={homeStyles.infoIcon}
+                      />
+                      <CommonText
+                        title="Info"
+                        titleStyle={homeStyles.infoText}
+                      />
+                    </View>
+                  </TouchableOpacity>
+                </View>
+              </View>
+            </View>
+          </ImageBackground>
+        </View>
+
+        <TopPicksCard />
+        <ContinueCard />
       </View>
-    </View>
+    </ScrollView>
   );
 };
